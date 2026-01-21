@@ -1,0 +1,72 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+
+# Compiled binaries (except cpuid_helper.exe - needed by users)
+*.obj
+*.pdb
+*.ilk
+*.lib
+*.exp
+
+# Exclude executables except cpuid_helper.exe
+*.exe
+!cpuid_helper.exe
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# OS
+Thumbs.db
+desktop.ini
+
+# Project-specific
+*.tmp
+*.bak
+new.txt
+
+# Test and development scripts
+test_*.py
+show_*.py
+verify_*.py
+discover_*.py
+
+# Development documentation (exclude from repo)
+PROJECT_COMPLETION_SUMMARY.md
+MEMORY_REFINEMENTS.md
+MEMORY_PHASE2_SUMMARY.md
+MEMORY_ENHANCEMENTS.md
+FINAL_STATUS.md
+DOCUMENTATION_INDEX.md
+DISK_TYPE_DETECTION_FIX.md
+CPUID_QUICK_START.md
+CPUID_HELPER_SETUP.md
