@@ -1,0 +1,313 @@
+
+╔══════════════════════════════════════════════════════════════╗
+║                   HALFAX SYSTEM REPORT                        ║
+║                   Generated: 2026-02-14 17:36:02              ║
+╚══════════════════════════════════════════════════════════════╝
+
+
+╔══════════════════════════════════════════════════════════════╗
+║                      SYSTEM OVERVIEW                         ║
+╚══════════════════════════════════════════════════════════════╝
+
+
+SYSTEM IDENTIFICATION:
+Hostname:          Betelgeuse
+Model / SKU:       Unknown
+Serial Number:     Unknown
+
+STORAGE OVERVIEW:
+Total Drives:      15
+Total Capacity:    1649.93 GB
+Total Free Space:  1555.26 GB
+Free Space %:      94.3%
+
+OPERATING SYSTEM:
+OS:                Ubuntu 24.04.4 LTS
+Build:             #14~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Jan 15 15:52:10 UTC 2
+Machine Type:      x86_64
+Platform:          Linux-6.17.0-14-generic-x86_64-with-glibc2.39
+Python Version:    3.12.3
+
+CPU SUMMARY:
+Brand:             AMD RYZEN AI MAX+ 395 w/ Radeon 8060S
+Architecture:      X86_64
+Logical Cores:     32
+Physical Cores:    16
+
+MEMORY SUMMARY:
+Total Memory:      30.98 GB
+Used Memory:       6.78 GB (21.9%)
+Available Memory:  24.20 GB
+
+TELEMETRY SYSTEM STATUS:
+Kernel Driver:      Not Available
+  Error:             Driver not loaded or broker not found
+
+User-Mode Helpers:
+  CPU Topology    ✓ Available
+  Memory SPD      ✓ Available
+  NVMe SMART      ✓ Available
+  Display EDID    ✓ Available
+
+
+╔══════════════════════════════════════════════════════════════╗
+║                      CPU INFORMATION                         ║
+╚══════════════════════════════════════════════════════════════╝
+
+
+PROCESSOR DETAILS:
+Brand:             AMD RYZEN AI MAX+ 395 w/ Radeon 8060S
+Architecture:      X86_64
+Processor:         x86_64
+CPUID Brand:       Unavailable
+
+CORE INFORMATION:
+Logical Cores:     32
+Physical Cores:    16
+SMT Status:        Yes (2:1 threads)
+
+FREQUENCY INFORMATION:
+Base Clock:        625.00 MHz
+Max Frequency:     5187.50 MHz
+Max Turbo:         5187.50 MHz
+Current Freq:      5074.64 MHz (Package Frequency)
+Bus Clock:         Unavailable
+Frequency Source:  psutil
+
+TURBO RATIO INFORMATION:
+Max Turbo (1-core):   Unavailable MHz
+Max Turbo (all-core): Unavailable MHz
+MSR Access:           Not available (Driver not loaded or broker not found)
+
+CACHE INFORMATION:
+L1 Cache:          768 KiB (16 instances)
+L2 Cache:          16 MiB (16 instances)
+L3 Cache:          64 MiB (2 instances)
+
+POWER & THERMAL:
+TDP:               Unavailable
+Package Power:     Unavailable
+Socket:            1
+
+TEMPERATURE:
+  ACPI Thermal         63.0°C
+
+VIRTUALIZATION:
+  Support:           Supported
+
+INSTRUCTION SETS (Categorized):
+  SIMD: AVX, AVX2, AVX512DQ, AVX512F, SSE, SSE2, SSE4_1, SSE4_2, SSSE3, 3DNOWPREFETCH
+  Crypto: AES, PCLMULQDQ, SHA
+  System: APIC, MCA, MCE, MTRR, PAE, PSE, TSC
+  Bit Manipulation: ADX, BMI1, BMI2, POPCNT
+  Virtualization: SVM
+
+SECURITY FEATURES:
+  AES-NI
+  SMEP
+  SMAP
+  Spectre/Meltdown Mitigations
+
+╔══════════════════════════════════════════════════════════════╗
+║                    POWER USERS SECTION                        ║
+╚══════════════════════════════════════════════════════════════╝
+
+╔══════════════════════════════════════════════════════════════╗
+║          PRIVILEGED MSR TELEMETRY (Kernel Driver)            ║
+╚══════════════════════════════════════════════════════════════╝
+
+DRIVER STATUS:
+  Kernel Helper:     Not Available
+  Status:            Not Available
+  Reason:            Driver not loaded or broker not found
+
+Privileged hardware telemetry requires:
+  1. HalfaxTelemetry driver installed and running
+  2. halfax_kernel_broker.exe present
+  3. Administrator privileges
+
+To check driver status:
+  > sc query HalfaxTelemetry
+Thermal Throttling: Temperature data unavailable
+
+
+╔══════════════════════════════════════════════════════════════╗
+║                       GPU INFORMATION                         ║
+╚══════════════════════════════════════════════════════════════╝
+
+
+"╔══════════════════════════════════════════════════════════════╗"
+"║                      GPU INFORMATION                         ║"
+"╚══════════════════════════════════════════════════════════════╝"
+
+No GPU information available
+
+---- MONITOR INFORMATION ----
+
+Monitor 1:
+  Name:            Meta-0
+  Resolution:      2560x1600
+  Refresh Rate:    59.99 Hz
+  Color Depth:     Unknown bits
+
+
+╔══════════════════════════════════════════════════════════════╗
+║                      MEMORY INFORMATION                       ║
+╚══════════════════════════════════════════════════════════════╝
+
+
+Total: 30.98 GB
+Used: 6.78 GB (21.9%)
+Available: 24.20 GB
+Modules: 0
+
+
+╔══════════════════════════════════════════════════════════════╗
+║                      STORAGE INFORMATION                      ║
+╚══════════════════════════════════════════════════════════════╝
+
+
+Storage status: Phase 5 - In Progress
+
+
+╔══════════════════════════════════════════════════════════════╗
+║                      DISK INFORMATION                         ║
+╚══════════════════════════════════════════════════════════════╝
+
+
+Disk formatting error: invalid literal for int() with base 10: '1.8T'
+
+
+╔══════════════════════════════════════════════════════════════╗
+║                      NETWORK INFORMATION                      ║
+╚══════════════════════════════════════════════════════════════╝
+
+
+============================================================
+🟢 HERE IS YOUR CURRENT ACCESS:
+============================================================
+
+  Connection Type: Ethernet (Wired)
+  Your IP:        192.168.0.84
+
+  Gateway (Router IP):  192.168.0.1
+  Gateway Owner:  🔒 Private Network (Local Router)
+  Gateway Hostname:    _gateway
+
+  DNS Servers:
+    DNS 1: 127.0.0.53
+
+  Active Adapter: wlp195s0
+
+  Summary:
+    - Your IPv4 is private (DHCP-assigned on the local WiFi segment).
+    - Gateway is the local hotspot/router interface (NAT edge).
+
+============================================================
+GATEWAY INFORMATION:
+============================================================
+  Gateway:    0.0.0.0
+    Interfaces: 1
+  Gateway:    192.168.0.0
+    Interfaces: 1
+
+============================================================
+DNS SERVERS:
+============================================================
+  DNS 1: 127.0.0.53
+
+============================================================
+NETWORK ADAPTER CONFIGURATION:
+============================================================
+
+  Adapter 1: Unknown
+    MAC Address:  Unknown
+    DHCP Enabled: Unknown
+
+  Adapter 2: Unknown
+    MAC Address:  Unknown
+    DHCP Enabled: Unknown
+
+============================================================
+NETWORK INTERFACES: 3
+============================================================
+
+  lo 🟢 UP
+    Speed:      Unknown
+    MTU:        65536
+    Type:       N/A
+    IP Addresses:
+      AF_INET 127.0.0.1
+               Netmask: 255.0.0.0
+      AF_INET6 ::1
+               Netmask: ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
+      AF_PACKET 00:00:00:00:00:00
+      IPv4   192.168.0.84
+
+  eno1 ⚫ DOWN
+    Speed:      Unknown
+    MTU:        1500
+    Type:       N/A
+    IP Addresses:
+      AF_PACKET 84:47:09:6c:e6:81
+      IPv4   192.168.0.84
+
+  wlp195s0 🟢 UP
+    Speed:      Unknown
+    MTU:        1500
+    Type:       N/A
+    IP Addresses:
+      AF_INET 192.168.0.84
+               Netmask: 255.255.255.0
+      AF_INET6 fe80::7bf2:8799:9199:a911%wlp195s0
+               Netmask: ffff:ffff:ffff:ffff::
+      AF_PACKET ac:f2:3c:35:1a:9d
+      IPv4   192.168.0.84
+
+============================================================
+CONNECTION STATISTICS:
+============================================================
+  Active Connections: 188
+    Established: 91
+    Listening:   11
+    Time Wait:   80
+    Close Wait:  0
+
+============================================================
+NETWORK I/O STATISTICS:
+============================================================
+  Bytes Sent:      251,450,258
+  Bytes Received:  164,506,049
+  Packets Sent:    272,595
+  Packets Recv:    219,873
+  Errors In:       0
+  Errors Out:      0
+  Dropped In:      0
+  Dropped Out:     7
+
+
+╔══════════════════════════════════════════════════════════════╗
+║                      DISPLAY INFORMATION                      ║
+╚══════════════════════════════════════════════════════════════╝
+
+
+─── Monitor 1 ───────────────────────────────────────────────
+  Name:             Meta-0
+  Resolution:       2560x1600
+  Refresh Rate:     59.99
+
+
+╔══════════════════════════════════════════════════════════════╗
+║                   SYSTEM ARCHITECTURE                        ║
+╚══════════════════════════════════════════════════════════════╝
+
+
+No PCI topology available
+
+
+
+╔══════════════════════════════════════════════════════════════╗
+║                       END OF REPORT                            ║
+║              Generated by Halfax System Reporter               ║
+╚══════════════════════════════════════════════════════════════╝
+

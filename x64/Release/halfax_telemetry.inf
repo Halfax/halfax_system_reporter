@@ -1,0 +1,79 @@
+;
+; Halfax Telemetry Driver Installation INF
+; Copyright (c) Halfax System Reporter
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%ManufacturerName%
+CatalogFile=HalfaxTelemetry.cat
+DriverVer = 01/25/2026,10.41.52.52
+PnpLockdown=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+HalfaxTelemetry_Device_CoInstaller_CopyFiles = 11
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+halfax_telemetry_driver.sys = 1,,
+
+; ================= Class section =====================
+
+[ClassInstall32]
+Addreg=SystemClassReg
+
+[SystemClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-5
+
+; ================= Install section ===================
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTamd64
+
+[Standard.NTamd64]
+%HalfaxTelemetry.DeviceDesc%=HalfaxTelemetry_Device, Root\HalfaxTelemetry
+
+[HalfaxTelemetry_Device]
+CopyFiles=Drivers_Dir
+
+[HalfaxTelemetry_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+halfax_telemetry_driver.sys
+
+; ================= Service installation ==============
+
+[HalfaxTelemetry_Device.NT.Services]
+AddService = HalfaxTelemetry,%SPSVCINST_ASSOCSERVICE%, HalfaxTelemetry_Service_Inst
+
+[HalfaxTelemetry_Service_Inst]
+DisplayName    = %HalfaxTelemetry.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\halfax_telemetry_driver.sys
+
+; ================= Device interface ==================
+
+[HalfaxTelemetry_Device.NT.Interfaces]
+AddInterface={8E6F1D3A-47B2-4E9C-8D7A-9F2B4C5E6A7D},,HalfaxTelemetry_Interface
+
+[HalfaxTelemetry_Interface]
+; Interface for user-mode apps
+
+; ================= Strings ===========================
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="Halfax"
+ClassName="System Devices"
+DiskName="Halfax Telemetry Installation Disk"
+HalfaxTelemetry.DeviceDesc = "Halfax Telemetry Driver"
+HalfaxTelemetry.SVCDESC = "Halfax Hardware Telemetry Service"

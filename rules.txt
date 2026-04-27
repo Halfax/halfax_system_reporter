@@ -1,0 +1,634 @@
+================================================================================
+HALFAX TELEMETRY DRIVER - PROJECT RULES & CONTEXT
+Last Updated: January 24, 2026 1:10 PM
+================================================================================
+
+================================================================================
+1. PROJECT IDENTITY
+================================================================================
+
+Project Name: Halfax Telemetry Driver
+Purpose: Expose MSR/PCI/SMBus hardware access via kernel driver
+Architecture: WDM kernel driver → C++ broker → Python API
+Current Phase: Post-WDM-conversion, pre-deployment-testing
+Status: REBOOT REQUIRED (symbolic link cleanup)
+
+================================================================================
+2. CURRENT STATE
+================================================================================
+
+Driver: 
+  - Type: WDM (converted from KMDF on Jan 24, 2026)
+  - Version: 14.7.0.842
+  - Built: January 24, 2026 7:00 PM
+  - Status: ✅ OPERATIONAL
+
+Service:
+  - Name: halfax_telemetry
+  - Type: kernel driver
+  - Start: demand
+  - Status: ✅ RUNNING (STATE: 4)
+  
+Device Configuration:
+  - Device name: \Device\HalfaxTelemetry2 (workaround for stuck symbolic link)
+  - Symbolic link: \DosDevices\HalfaxTelemetry2
+  - User-mode path: \\.\HalfaxTelemetry2
+  
+Operational Status:
+  - ✅ Driver loads successfully
+  - ✅ Broker communicates via symbolic link fallback
+  - ✅ All IOCTLs functional
+  - ✅ Python integration working
+  - ✅ 24 cores detected and monitored
+  
+Test Results:
+  - Driver version: 1.0.1
+  - Capabilities: MSR read/write, multicore (24 processors)
+  - MSR reads: Platform Info, Thermal, Turbo, Energy all working
+  - Python: Temps (50-72°C), power (180W), energy counters, turbo (5.4GHz)
+
+Next Actions:
+  - System fully operational, no immediate action required
+  - After next reboot, optionally change device name back to HalfaxTelemetry
+  - Continue with main.py integration
+
+================================================================================
+3. ENVIRONMENT FACTS
+================================================================================
+
+[System Configuration]
+- OS: Windows 10/11
+- User: arhal_iz5093n
+- Admin Privileges: YES (verified, no UAC prompts needed)
+- Test Signing: ENABLED (bcdedit shows "testsigning Yes")
+- Integrity Checks: DISABLED (bcdedit shows "nointegritychecks Yes")
+
+[File System Paths]
+- Project Root: C:\Users\arhal_iz5093n\Desktop\projects\somethingfun
+- Python venv: .\venv\Scripts\python.exe
+- Visual Studio: C:\Program Files\Microsoft Visual Studio\2022\Community
+- WDK: 10.0.26100.0
+- Driver Deployment: C:\Windows\System32\drivers\halfax_telemetry_driver.sys
+- Catalog Deployment: C:\Windows\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\halfaxtelemetry.cat
+
+[Build Tools]
+- MSBuild: In PATH (VS 2022 integration)
+- signtool: C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\signtool.exe
+- inf2cat: C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\inf2cat.exe
+
+[Test Certificate]
+- Name: WDKTestCert
+- Subject: WDKTestCert arhal_iz5093n,134136815219263104
+- SHA1 Thumbprint: 5972C1283156B4C2717091F6B5F81C2A90E229DE
+- Store Location: My (Personal)
+- Validity: Until January 22, 2036
+
+================================================================================
+4. CRITICAL COMMANDS
+================================================================================
+
+[Build Driver]
+Command: 
+  msbuild halfax_telemetry_driver.vcxproj /p:Configuration=Release /p:Platform=x64
+
+Explanation: Standard MSBuild, VS 2022 paths already in environment
+Pre-requisite: Copy .sys to x64\Release\halfax_telemetry_driver\ before build
+Reason: inf2cat.exe validation needs .sys file in driver package directory
+Output: x64\Release\halfax_telemetry_driver.sys (signed automatically)
+        x64\Release\halfax_telemetry_driver\halfaxtelemetry.cat (signed automatically)
+
+[Sign Driver File]
+Command:
+  signtool sign /v /fd SHA256 /s My /n "WDKTestCert" /t http://timestamp.digicert.com C:\Windows\System32\drivers\halfax_telemetry_driver.sys
+
+Required Parameters:
+  /v = Verbose output
+  /fd SHA256 = Use SHA256 digest (SHA1 deprecated)
+  /s My = Certificate store (Personal)
+  /n "WDKTestCert" = Certificate name
+  /t http://timestamp.digicert.com = Timestamp server
+
+Why Sign After Deployment: Build signs the local file, must re-sign after copying to System32
+
+[Sign Catalog File]
+Command:
+  signtool sign /v /fd SHA256 /s My /n "WDKTestCert" /t http://timestamp.digicert.com [catalog_path]
+
+Must Sign: BOTH .sys AND .cat files
+Order: Sign .sys first, then .cat
+
+[Service Management]
+Create Service:
+  sc.exe create halfax_telemetry type=kernel start=demand binPath=C:\Windows\System32\drivers\halfax_telemetry_driver.sys
+
+Start Service:
+  sc.exe start halfax_telemetry
+
+Stop Service:
+  sc.exe stop halfax_telemetry
+
+Query Service:
+  sc.exe query halfax_telemetry
+
+Delete Service:
+  sc.exe delete halfax_telemetry
+
+IMPORTANT: Use sc.exe, NOT PowerShell 'sc' alias
+Reason: PowerShell 'sc' is an alias for Set-Content, not Service Control
+
+[Test Broker]
+Command:
+  .\halfax_kernel_broker.exe --version
+
+Expected Output:
+  Driver Protocol Version: 1
+  Driver Capabilities: 0x00000003
+    [✓] MSR_READ
+    [✓] MSR_WRITE
+
+[Test MSR Read]
+Command:
+  .\halfax_kernel_broker.exe --read-msr 0 0xCE
+
+Expected Output:
+  MSR 0xCE on processor 0: 0x00000000XXXXXXXX
+  (Actual value varies by CPU)
+
+[Python Integration Test]
+Command:
+  .\venv\Scripts\python.exe main_integration_example.py
+
+Expected Output:
+  === Halfax System Reporter - Kernel Telemetry Demo ===
+  [Kernel Driver Status]
+    Driver state: 🟢 Full
+    ...
+
+================================================================================
+5. CONSTRAINTS AND GOTCHAS
+================================================================================
+
+[HARD RULES - NEVER VIOLATE]
+
+1. NEVER use IoRegisterDeviceInterface for control devices
+   Reason: WDM control devices (non-PnP) don't support device interfaces
+   What Happens: Returns error STATUS_INVALID_DEVICE_REQUEST
+   Alternative: Use IoCreateSymbolicLink only
+
+2. NEVER use KMDF anymore
+   Reason: Converted to WDM on January 24, 2026 due to KMDF framework binding failure
+   History: 4+ hours of KMDF troubleshooting documented in KMDF_TROUBLESHOOTING_SUMMARY.md
+   Current: WDM-only driver architecture
+
+3. NEVER use && in PowerShell
+   Reason: && is not a valid PowerShell operator (it's bash syntax)
+   Alternative: Use semicolon ; to chain commands
+   Example: sc.exe stop service; Copy-Item file dest; sc.exe start service
+
+4. NEVER use PowerShell 'sc' alias
+   Reason: 'sc' is an alias for Set-Content, not Service Control
+   Always Use: sc.exe (with .exe extension)
+
+5. ALWAYS sign both .sys and .cat files
+   Reason: Windows Code Integrity checks both
+   Order: Sign .sys first, then .cat
+   Missing Either: Driver will fail signature verification
+
+6. ALWAYS use /fd SHA256 when signing
+   Reason: SHA1 is deprecated and may fail on newer Windows versions
+   Error Without: "No file digest algorithm specified"
+
+7. NEVER create WDF objects in WDM code
+   Reason: WDM doesn't link WDF libraries
+   What to Use: IoCreateDevice, IoCreateSymbolicLink, IoCompleteRequest
+
+[SOFT RULES - BEST PRACTICES]
+
+1. Copy .sys to driver package folder before building
+   Reason: inf2cat.exe needs it for validation during build
+   Command: Copy-Item x64\Release\halfax_telemetry_driver.sys x64\Release\halfax_telemetry_driver\
+
+2. Update POST_REBOOT_CHECKLIST.md after major changes
+   Reason: Continuity across reboots and sessions
+   When: After driver changes, service changes, or architectural decisions
+
+3. Keep REBOOT_STATUS.txt current before each reboot
+   Reason: Document why reboot is needed and expected outcome
+   Include: Reason, pre-reboot state, expected post-reboot state
+
+4. Use DebugView as Administrator with "Capture Kernel" enabled
+   Reason: Kernel logs require admin privileges and kernel capture
+   Menu: Capture → Capture Kernel (checkbox)
+
+5. Prefer reading large file ranges over multiple small reads
+   Reason: Tool call efficiency and token usage optimization
+   Example: Read 100 lines at once vs 10 reads of 10 lines
+
+6. Quote paths with spaces in PowerShell
+   Reason: Curly braces {} in paths confuse PowerShell parser
+   Example: Copy-Item file "C:\Windows\System32\CatRoot\{GUID}\file"
+
+================================================================================
+6. ERROR PATTERNS & SOLUTIONS
+================================================================================
+
+[Error 183: "Cannot create a file when that file already exists"]
+Symptom: sc.exe start halfax_telemetry fails with error 183
+Cause: Symbolic link \DosDevices\HalfaxTelemetry already exists from previous driver
+Root Cause: Previous driver crashed or didn't call IoDeleteSymbolicLink in Unload handler
+Solution: Reboot to clean up symbolic link
+Prevention: Ensure HalfaxUnload always calls IoDeleteSymbolicLink before IoDeleteDevice
+Alternative: Delete and recreate service, wait 5 seconds between commands
+
+[Error 577: "Windows cannot verify the digital signature"]
+Symptom: Driver fails to load, Event Viewer shows signature verification error
+Cause: Missing catalog, unsigned files, or wrong hash algorithm
+Solutions:
+  1. Verify catalog exists in CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\
+  2. Re-sign both .sys and .cat with /fd SHA256
+  3. Verify BCD: testsigning=Yes, nointegritychecks=Yes
+  4. Check Code Integrity log: Get-WinEvent -LogName 'Microsoft-Windows-CodeIntegrity/Operational'
+Prevention: Always sign after deployment, sign both files, use SHA256
+
+[ERROR 1: "Incorrect function"]
+Symptom: Service starts but DriverEntry never called, no DebugView logs
+Historical Cause: KMDF framework binding failure (pre-WDM conversion)
+Why It Happened: KMDF loader couldn't bind to framework on this system
+Resolution: Converted to WDM on January 24, 2026
+Current: No longer relevant (WDM doesn't use KMDF framework)
+
+[Build Error: inf2cat "file is missing or cannot be decompressed"]
+Symptom: inf2cat.exe fails during build with error about missing .sys file
+Cause: .sys file not in driver package directory when inf2cat validates INF
+Solution: Copy x64\Release\halfax_telemetry_driver.sys to x64\Release\halfax_telemetry_driver\
+Prevention: Add this copy step to build script or do manually before each build
+
+[Broker Error: "No device interface found"]
+Symptom: halfax_kernel_broker.exe reports "No device interface found"
+Cause: Driver uses symbolic link, not device interface (WDM limitation)
+Expected Behavior: Broker should fall back to \\.\HalfaxTelemetry path
+Solution: This is normal for WDM control devices, broker handles fallback
+Check: Verify driver is running (sc.exe query halfax_telemetry → STATE: 4)
+
+[DebugView shows no logs]
+Symptom: DebugView running but no HalfaxTelemetry logs appear
+Causes:
+  1. DebugView not running as Administrator
+  2. "Capture Kernel" not enabled (Capture menu)
+  3. Driver failed DriverEntry before logging (check Event Viewer)
+  4. Wrong log filter (should not filter by process in kernel mode)
+Solutions:
+  1. Restart DebugView as Administrator
+  2. Enable Capture → Capture Kernel
+  3. Check Event Viewer: Get-WinEvent -LogName System -MaxEvents 20
+  4. Clear all filters (Edit → Filter/Highlight)
+
+================================================================================
+7. FILE MANIFEST
+================================================================================
+
+[Active Source Files]
+halfax_telemetry_driver.c (557 lines)
+  - WDM kernel driver (converted from KMDF on Jan 24, 2026)
+  - Implements IOCTLs for MSR/PCI/SMBus access
+  - MSR whitelist with 11 safe read-only MSRs
+  - Buffered I/O with direct systemBuffer access
+
+halfax_telemetry.h
+  - IOCTL definitions and structures
+  - Protocol version: 1
+  - Capability flags: MSR_READ (0x01), MSR_WRITE (0x02)
+  - MSR definitions (Platform Info, Therm Status, RAPL, etc.)
+
+halfax_guid.cpp
+  - Device interface GUID definition
+  - GUID: {8E6F1D3A-47B2-4E9C-8D7A-9F2B4C5E6A7D}
+  - Note: Not used in WDM (device interface registration removed)
+
+halfax_kernel_broker.cpp (570 lines)
+  - User-mode C++ broker
+  - Wraps driver IOCTLs with CLI interface
+  - JSON output for Python consumption
+  - Commands: --version, --capabilities, --read-msr, --write-msr, --read-pci, --read-smbus
+
+halfax_kernel_helper.py (700+ lines)
+  - Python API layer with semantic functions
+  - KernelHelper class with auto-detection
+  - MSR_REGISTRY with decoders
+  - Semantic APIs: read_core_temperatures(), read_package_power(), read_energy_counters()
+  - Three-state presence model: absent/limited/full
+
+halfax_telemetry.inf
+  - Driver installation manifest
+  - Class: System
+  - Provider: Halfax
+  - Version stamped during build
+
+[Configuration Files]
+halfax_telemetry_driver.vcxproj
+  - Visual Studio 2022 project file
+  - DriverType: WDM (changed from KMDF)
+  - Configuration: Release x64
+  - Target: Windows 10+
+
+requirements.txt
+  - Python package dependencies
+  - psutil, py-cpuinfo, wmi (Windows), pywin32 (Windows)
+
+[Documentation Files]
+POST_REBOOT_CHECKLIST.md
+  - Current testing steps after reboot
+  - Step-by-step commands with expected output
+  - Troubleshooting section for common issues
+  - Updated: January 24, 2026 1:07 PM
+
+WDM_CONVERSION_PLAN.md
+  - Detailed conversion plan from KMDF to WDM
+  - Status: COMPLETED (Jan 24, 2026)
+  - Original plan preserved for reference
+
+KMDF_TROUBLESHOOTING_SUMMARY.md
+  - Historical record of KMDF debugging session
+  - 4+ hours of troubleshooting attempts
+  - Root cause analysis: KMDF framework binding failure
+  - Lessons learned and decision to convert to WDM
+
+REBOOT_STATUS.txt
+  - Current reboot tracking
+  - REBOOT #3: Symbolic link cleanup
+  - Pre-reboot state and expected outcome
+
+DRIVER_README.md
+  - Architecture overview
+  - Security model
+  - Integration patterns
+  - MSR reference table
+
+ENHANCEMENTS.md
+  - Future feature list
+  - PCI config space reading
+  - SMBus reading
+  - Additional MSR whitelisting
+  - ETW tracing support
+
+REBUILD_DRIVER.md
+  - Build instructions
+  - Step-by-step compilation guide
+  - Deployment procedures
+
+SCM_SERVICE_MIGRATION.md
+  - Service control manager deployment guide
+  - Production signing options
+  - Alternative deployment methods
+
+[Build Artifacts]
+x64\Release\halfax_telemetry_driver.sys
+  - Compiled WDM driver binary
+  - Size: ~15 KB
+  - Signed with WDKTestCert
+  - Deployed to: C:\Windows\System32\drivers\
+
+x64\Release\halfax_telemetry_driver\halfaxtelemetry.cat
+  - Driver catalog file
+  - Created by inf2cat.exe
+  - Signed with WDKTestCert
+  - Deployed to: C:\Windows\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\
+
+x64\Release\halfax_telemetry.inf
+  - Stamped INF file (version updated during build)
+
+halfax_kernel_broker.exe
+  - Compiled user-mode broker
+  - Built with Visual Studio 2022
+  - No special deployment (run from project directory)
+
+[Temporary/Debug Files]
+testjunk.txt - Debug output from troubleshooting (can be deleted after testing)
+notes.txt - Early project notes (superseded by documentation)
+POST_REBOOT_CHECKLIST_OLD.md - Backup before Jan 24 update
+
+================================================================================
+8. DECISION HISTORY
+================================================================================
+
+[2026-01-24 12:00 PM - Converted KMDF to WDM]
+Reason: 
+  - KMDF driver failed with "Incorrect function" (ERROR 1)
+  - 4+ hours of troubleshooting: signatures, catalogs, KMDF versions, exports, pnputil
+  - Root cause: KMDF framework binding incompatibility on this system
+  - KMDF loader failed before DriverEntry, no way to debug further
+
+Impact:
+  - Simplified architecture (no WDF dependencies)
+  - Manual IRP handling instead of KMDF abstractions
+  - Direct IoCreateDevice, IoCreateSymbolicLink, IoCompleteRequest
+  - Removed device interface registration (control devices don't support it)
+
+Tradeoffs:
+  - More verbose code (WDM requires manual IRP processing)
+  - Better control over device lifecycle
+  - No black-box KMDF framework failures
+  - Easier to debug (pure WDM logs, no framework layers)
+
+Result: Driver builds successfully, ready for testing after reboot
+
+[2026-01-23 - Used Control Device Architecture (Non-PnP)]
+Reason:
+  - No physical hardware device to attach to
+  - Need global device accessible from any process
+  - MSR/PCI/SMBus access doesn't require PnP enumeration
+
+Impact:
+  - Device created in DriverEntry, not AddDevice
+  - No device interface registration (control devices don't support it)
+  - Symbolic link used for user-mode access
+  - Service type: kernel (not function driver)
+
+Why This Matters:
+  - IoRegisterDeviceInterface doesn't work for control devices
+  - Broker must use \\.\HalfaxTelemetry path (fallback)
+  - No Plug and Play events or power management
+
+[2026-01-23 - MSR Whitelist Approach]
+Reason:
+  - Security: Prevent arbitrary MSR access
+  - Safety: Some MSRs can brick systems or cause instability
+  - Compliance: Principle of least privilege
+
+Impact:
+  - Only 11 safe read-only MSRs allowed
+  - All write attempts return ACCESS_DENIED (by design)
+  - Future: Add separate write whitelist if needed
+
+Whitelisted MSRs:
+  - 0xCE: MSR_IA32_PLATFORM_INFO (base frequency, max turbo)
+  - 0x19C: MSR_IA32_THERM_STATUS (temperature)
+  - 0x1A2: MSR_IA32_TEMPERATURE_TARGET (TjMax)
+  - 0x1AD: MSR_TURBO_RATIO_LIMIT (turbo ratios)
+  - 0x606: MSR_RAPL_POWER_UNIT (power units)
+  - 0x610: MSR_PKG_POWER_LIMIT (power limits)
+  - 0x611: MSR_PKG_ENERGY_STATUS (package energy)
+  - 0x614: MSR_PKG_POWER_INFO (TDP info)
+  - 0x619: MSR_DRAM_ENERGY_STATUS (DRAM energy)
+  - 0x639: MSR_PP0_ENERGY_STATUS (core energy)
+  - 0x641: MSR_PP1_ENERGY_STATUS (graphics energy)
+
+[2026-01-23 - Buffered I/O with METHOD_BUFFERED]
+Reason:
+  - Simpler than Direct I/O or Neither I/O
+  - Kernel copies data to/from user buffers
+  - Safe for small structures (<4KB)
+
+Impact:
+  - Both input and output use systemBuffer (shared buffer)
+  - No need for MDLs or direct memory mapping
+  - IO_STACK_LOCATION contains buffer lengths
+
+Pattern:
+  PHALFAX_XXX_REQUEST request = (PHALFAX_XXX_REQUEST)systemBuffer;
+  PHALFAX_XXX_RESPONSE response = (PHALFAX_XXX_RESPONSE)systemBuffer;
+  // Process request, fill response
+  Irp->IoStatus.Information = sizeof(HALFAX_XXX_RESPONSE);
+  IoCompleteRequest(Irp, IO_NO_INCREMENT);
+
+================================================================================
+9. TESTING PROCEDURES
+================================================================================
+
+[Quick Test - Current Operational Status]
+1. Check service status:
+   sc.exe query halfax_telemetry
+   Expected: STATE: 4 RUNNING ✅
+
+2. Test broker:
+   .\halfax_kernel_broker.exe --version
+   Expected: Driver version: 1.0.1 ✅
+
+3. Test MSR read:
+   .\halfax_kernel_broker.exe --read-msr 0 0xCE
+   Expected: Hex value (e.g., 0x804083CF1811F00) ✅
+
+Success: All three commands working ✅
+
+[Full Test - Complete Validation]
+See POST_REBOOT_CHECKLIST.md for complete step-by-step testing procedure
+
+Steps:
+1. Start service
+2. Check service status
+3. Open DebugView (verify 9 numbered logs)
+4. Test broker --version
+5. Test broker --read-msr 0 0xCE
+6. Run Python integration: main_integration_example.py
+
+[Expected DebugView Output]
+HalfaxTelemetry: ============================================
+HalfaxTelemetry: DriverEntry START - WDM Version
+HalfaxTelemetry: Build: Jan 24 2026
+HalfaxTelemetry: ============================================
+HalfaxTelemetry: [1] Dispatch routines registered
+HalfaxTelemetry: [2] Device name: \Device\HalfaxTelemetry
+HalfaxTelemetry: [3] Symbolic link: \??\HalfaxTelemetry
+HalfaxTelemetry: [4] Creating device object...
+HalfaxTelemetry: [5] Device created successfully
+HalfaxTelemetry: [6] Device extension initialized (Buffered I/O)
+HalfaxTelemetry: [7] Creating symbolic link...
+HalfaxTelemetry: [8] Symbolic link created: \??\HalfaxTelemetry
+HalfaxTelemetry: [9] User-mode path: \\.\HalfaxTelemetry
+HalfaxTelemetry: ============================================
+HalfaxTelemetry: *** DRIVER LOADED SUCCESSFULLY (WDM) ***
+HalfaxTelemetry: ============================================
+
+[Python Test - Semantic API Validation]
+Command: .\venv\Scripts\python.exe main_integration_example.py
+
+Expected Output Structure:
+=== Halfax System Reporter - Kernel Telemetry Demo ===
+
+[Kernel Driver Status]
+  Driver state: 🟢 Full
+  Source: halfax_kernel_broker.exe
+  Protocol: v1
+  Capabilities: msr_read
+
+[CPU Package]
+  Package Power: XX.X W
+  Package Energy: XXXXX.XX J
+  DRAM Energy: XXXX.XX J
+
+[CPU Cores]
+  Core 0 Temperature: XX.X °C
+  Core 1 Temperature: XX.X °C
+  ...
+
+[Power Limits]
+  TDP: XX.X W
+  Turbo Power Limit: XX.X W
+
+Success Criteria: No exceptions, all metrics populated, state = Full
+
+[Error Cases to Test]
+1. Driver not running: State should be "absent", graceful error messages
+2. Broker missing: State should be "absent", explains where to find broker
+3. Invalid MSR: Broker should return error, Python should map to NotAvailable exception
+4. Non-admin: Broker should fail to open device, Python should show access error
+
+================================================================================
+10. CONTINUATION PROTOCOL
+================================================================================
+System Currently Operational]
+✅ Driver is running and fully functional
+✅ No reboot or intervention needed
+✅ Ready for integration with main.py
+
+[After Next System Reboot (Optional)]
+If you reboot for any reason, the driver should restart automatically:
+1. Service is set to start=demand, will load when broker first accesses it
+2. Or manually start: sc.exe start halfax_telemetry
+3. Test with: .\halfax_kernel_broker.exe --version
+4. If successful, continue normal operation
+5. Optionally change device name back to HalfaxTelemetry (see POST_REBOOT_CHECKLIST.md)
+
+[When Resuming Development Session]
+1. Read REBOOT_STATUS.txt for current operational state (✅ OPERATIONAL)
+2. Quick verification:
+   - sc.exe query halfax_telemetry (should show RUNNING)
+   - .\halfax_kernel_broker.exe --version (should return 1.0.1)
+3. If not running, start service: sc.exe start halfax_telemetry
+4. Continue with main.py integration or feature development
+
+[Before Any Reboot]
+1. No special preparation needed - service will restart automatically
+2. Note: After reboot, stuck HalfaxTelemetry symbolic link should be cleaned up
+3. Current HalfaxTelemetry2 configuration will continue to work
+
+[Handoff to Another LLM/Person]
+1. Share this rules.txt file
+2. Current status: ✅ OPERATIONAL, driver working perfectly
+3. Device name: HalfaxTelemetry2 (temporary workaround)
+4. See POST_REBOOT_CHECKLIST.md for test commands
+5. See REBOOT_STATUS.txt for success confirmation
+
+[Project Lifecycle Phases]
+Current Phase: ✅ OPERATIONAL
+- Driver compiled and signed ✓
+- Service running ✓
+- All IOCTLs functional ✓
+- Python integration working ✓
+- Next: Integration with main.py system reporter
+
+Future Phases:
+- Integration with main.py UI
+- Production hardening (ETW tracing, WHQL signing)
+- Feature expansion (PCI config space, SMBus implementations)
+- Optional: Revert to HalfaxTelemetry device name after rebootg)
+- Feature expansion (PCI, SMBus implementations)
+
+================================================================================
+END OF RULES
+================================================================================
+7:15 PM
+Next Review: During main.py integration
+Status: ✅ OPERATIONAL - Driver fully functional
+Next Review: After successful driver testing post-reboot
+Maintainer: Update this file after major decisions or architectural changes

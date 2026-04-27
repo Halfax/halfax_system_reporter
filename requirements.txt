@@ -1,5 +1,7 @@
 psutil==6.0.0
 py-cpuinfo==9.0.0
+ipwhois==1.2.0
+miniupnpc
 
 # Windows-specific (optional, gracefully handled on Linux/Pi)
 wmi==1.5.1; sys_platform == 'win32'

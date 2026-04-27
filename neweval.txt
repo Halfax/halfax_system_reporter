@@ -1,0 +1,126 @@
+There is a mismatch—but it’s not between “deployment script vs driver code.”
+It’s between PnP-style INF installation and a non‑PnP WDM control device driver.
+Your driver is not a PnP driver.
+Your INF pretends it is.
+Your deployment script treats it as a legacy service.
+Those two worlds are incompatible.
+
+1. Deployment Script (deploy_driver.py)
+✔️ Your description is accurate
+The script:
+• 	Calls 
+• 	Starts the service manually
+• 	Queries the service manually
+This is the correct way to load a legacy (non‑PnP) kernel driver.
+❗ But the script does not conflict with the driver
+The script is doing exactly what a non‑PnP WDM driver expects.
+
+2. Driver Code (halfax_telemetry_driver.c)
+✔️ Your description is accurate
+The driver:
+• 	Creates a control device: 
+• 	Creates a symbolic link: 
+❗ The debug mismatch () is real
+This is a bug in the driver code, not a deployment mismatch.
+It means one of these is true:
+• 	The debug print uses hardcoded “2” strings
+• 	The device name was changed but not updated everywhere
+• 	You compiled an older version of the driver than the source you’re reading
+This is worth fixing, but it’s not the root cause of the service issue.
+
+3. INF File (halfax_telemetry.inf)
+✔️ Your description is accurate
+The INF defines:
+• 	A PnP device section
+• 	A PnP service installation section
+• 	A demand-start kernel driver service
+❗ The INF is architecturally wrong
+A WDM control device driver is not a PnP driver.
+It should not have:
+• 	A hardware ID
+• 	A  section
+• 	A  section
+• 	A PnP service installation section
+Windows Plug and Play will never enumerate  unless you write a root‑enumeration installer or a co-installer.
+So the INF cannot and will not create the service.
+
+🚨 Corrected Critical Issues
+Issue #1: PnP vs Non‑PnP Conflict
+This is the real architectural mismatch.
+• 	The INF expects PnP enumeration
+• 	The driver is non‑PnP
+• 	The deployment script uses legacy service creation (correct for non‑PnP)
+So the INF is simply not applicable to this driver architecture.
+Issue #2: Name Inconsistencies
+You correctly identified:
+• 	Service name: 
+• 	Device name: 
+• 	Debug logs: 
+This is a driver code inconsistency, not a deployment mismatch.
+Issue #3: Service Not Found
+Your scenarios are plausible, but the most likely cause is simpler:
+✔️ The INF never created a service
+Because Windows PnP never enumerated the fake device.
+✔️ The script-created service may have failed
+If the driver was unsigned or the path was wrong,  silently fails.
+
+🎯 Corrected Root Cause Analysis
+Why  returns nothing
+Because no service was ever created—either:
+• 	The INF never created one (expected)
+• 	The script’s  failed (likely)
+Why the driver shows “Limited”
+Because:
+• 	The driver loaded enough to respond to IOCTLs
+• 	But hardware access failed (MSRs, PCI, SMBus, etc.)
+• 	So the user-mode app sees “alive but not functional”
+This is consistent with a driver that:
+• 	Loaded
+• 	Created a device
+• 	But failed initialization or capability probing
+
+🔧 The Real Problems (Corrected)
+Problem #1: The INF is wrong for this driver
+A non‑PnP WDM driver should not use a PnP INF.
+Problem #2: The deployment script is correct—but incomplete
+It must:
+• 	Create the service
+• 	Start the service
+• 	Verify the service exists
+• 	Verify the driver loaded
+• 	Handle failures explicitly
+Problem #3: The driver has internal inconsistencies
+The  debug output indicates:
+• 	Wrong binary loaded
+• 	Or stale build
+• 	Or mismatched source
+
+💡 What Should Actually Happen
+Correct installation flow for a non‑PnP WDM driver
+1. 	Sign the  file
+2. 	Copy it to 
+3. 	Create the service manually:
+
+4. 	Start the service:
+
+5. 	Verify:
+
+6. 	User-mode app opens:
+
+✔️ No INF needed
+Unless you convert the driver to a PnP model.
+
+🎯 Final Conclusion (Corrected)
+Your analysis is close, but the true root cause is:
+The INF is written for a PnP driver, but the driver is non‑PnP.
+This guarantees:
+• 	Windows will never create the service
+• 	PnP installation will never work
+• 	The deployment script is the only valid installation path
+• 	The driver will load but may not initialize hardware
+• 	The user-mode app will see “Limited”
+Why this explains everything:
+• 	No service found → INF never created one
+• 	Driver “Limited” → Loaded but failed hardware init
+• 	Version/protocol works → Device object exists
+• 	Test signing irrelevant → Driver loads but not fully functional

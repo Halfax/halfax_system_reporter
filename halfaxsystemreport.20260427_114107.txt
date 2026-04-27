@@ -1,0 +1,2586 @@
+╔══════════════════════════════════════════════════════════════╗
+║                     HALFAX SYSTEM REPORT                     ║
+╚══════════════════════════════════════════════════════════════╝
+
+Generated: 2026-04-27 11:41:07
+
+╔══════════════════════════════════════════════════════════════╗
+║                       SYSTEM OVERVIEW                        ║
+╚══════════════════════════════════════════════════════════════╝
+
+Hostname              : Betelgeuse
+Model                 : NucBox_EVO-X2
+Manufacturer          : Unknown
+Serial                : Default string
+Platform              : Linux-6.17.0-20-generic-x86_64-with-glibc2.39
+Os Name               : Linux
+Os Release            : 6.17.0-20-generic
+Processor             : AMD RYZEN AI MAX+ 395 w/ Radeon 8060S
+Architecture          : X86_64
+Processor Count       : 32
+Processor Physical    : 16
+Total Storage Gb      : 9102.13
+Total Storage Free Gb : 8186.92
+Memory Total Gb       : 30.98
+Memory Used Gb        : 23.49
+Memory Available Gb   : 7.49
+Memory Percent        : 75.80
+Boot Time             : Unknown
+Uptime                : Unknown
+
+╔══════════════════════════════════════════════════════════════╗
+║                      SYSTEM INFORMATION                      ║
+╚══════════════════════════════════════════════════════════════╝
+
+Hostname              : Betelgeuse
+Model                 : NucBox_EVO-X2
+Manufacturer          : Unknown
+Serial                : Default string
+Bios Version          : Unknown
+Bios Date             : Unknown
+Os Name               : Linux
+Os Version            : #20~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Mar 19 01:28:37 UTC 2
+Os Release            : 6.17.0-20-generic
+Architecture          : ('64bit', 'ELF')
+Processor             : x86_64
+Boot Time             : Unknown
+Uptime                : Unknown
+Platform              : Linux-6.17.0-20-generic-x86_64-with-glibc2.39
+Machine               : x86_64
+Processor Count       : 32
+Processor Physical    : 16
+Drive Count           : 29
+Total Storage Gb      : 9102.13
+Total Storage Free Gb : 8186.92
+
+╔══════════════════════════════════════════════════════════════╗
+║                       CPU INFORMATION                        ║
+╚══════════════════════════════════════════════════════════════╝
+
+Brand              : AMD RYZEN AI MAX+ 395 w/ Radeon 8060S
+Architecture       : X86_64
+Cores Logical      : 32
+Cores Physical     : 16
+Base Freq          : 625.00 MHz
+Max Freq           : 5187.50 MHz
+Max Turbo Freq     : 5187.50 MHz
+Max Turbo 1C       : Unavailable
+Max Turbo Ac       : Unavailable
+Msr Access         : Not available (Driver not loaded or broker not found)
+Current Freq       : 4993.65 MHz (Package Frequency)
+Freq Source        : psutil
+Bus Freq           : Unavailable
+Cpuid Brand        : Unavailable
+Cache L1           : 768 KiB (16 instances)
+Cache L2           : 16 MiB (16 instances)
+Cache L3           : 64 MiB (2 instances)
+Tdp                : Unavailable
+Socket             : 1
+Microcode          : Unavailable
+Smt Status         : Yes (2:1 threads)
+Virtualization     : Supported
+Numa Nodes         : N/A
+Thermal Throttling : Temperature data unavailable
+Package Power Draw : Unavailable
+Efficiency Summary : Per-core frequency data unavailable
+Instruction Sets:
+  - FPU
+  - VME
+  - DE
+  - PSE
+  - TSC
+  - MSR
+  - PAE
+  - MCE
+  - CX8
+  - APIC
+  - SEP
+  - MTRR
+  - PGE
+  - MCA
+  - CMOV
+Instruction Sets Grouped:
+  Simd:
+    - AVX
+    - AVX2
+    - AVX512DQ
+    - AVX512F
+    - SSE
+    - SSE2
+    - SSE4_1
+    - SSE4_2
+    - SSSE3
+    - 3DNOWPREFETCH
+  Crypto:
+    - AES
+    - PCLMULQDQ
+    - SHA
+  System:
+    - APIC
+    - MCA
+    - MCE
+    - MTRR
+    - PAE
+    - PSE
+    - TSC
+  Bit Manipulation:
+    - ADX
+    - BMI1
+    - BMI2
+    - POPCNT
+  Virtualization:
+    - SVM
+Features:
+  <empty>
+Temperatures:
+  Acpi Thermal : 70.0°C
+Security Features:
+  - AES-NI
+  - SMEP
+  - SMAP
+  - Spectre/Meltdown Mitigations
+P States:
+  <empty>
+C States:
+  <empty>
+Per Core Frequency:
+  <empty>
+C State Residency:
+  <empty>
+Cache Sharing Groups:
+  <empty>
+Apic Ids:
+  [1]
+    Index     : 0
+    Apic      : 0
+    Core Type : 64
+    L1D Group : 0
+    L2 Group  : 0
+    L3 Group  : 0
+  [2]
+    Index     : 1
+    Apic      : 1
+    Core Type : 64
+    L1D Group : 1
+    L2 Group  : 1
+    L3 Group  : 0
+  [3]
+    Index     : 2
+    Apic      : 2
+    Core Type : 64
+    L1D Group : 2
+    L2 Group  : 2
+    L3 Group  : 0
+  [4]
+    Index     : 3
+    Apic      : 3
+    Core Type : 64
+    L1D Group : 3
+    L2 Group  : 3
+    L3 Group  : 0
+  [5]
+    Index     : 4
+    Apic      : 4
+    Core Type : 64
+    L1D Group : 4
+    L2 Group  : 4
+    L3 Group  : 0
+  [6]
+    Index     : 5
+    Apic      : 5
+    Core Type : 64
+    L1D Group : 5
+    L2 Group  : 5
+    L3 Group  : 0
+  [7]
+    Index     : 6
+    Apic      : 6
+    Core Type : 64
+    L1D Group : 6
+    L2 Group  : 6
+    L3 Group  : 0
+  [8]
+    Index     : 7
+    Apic      : 7
+    Core Type : 64
+    L1D Group : 7
+    L2 Group  : 7
+    L3 Group  : 0
+  [9]
+    Index     : 8
+    Apic      : 8
+    Core Type : 64
+    L1D Group : 8
+    L2 Group  : 8
+    L3 Group  : 0
+  [10]
+    Index     : 9
+    Apic      : 9
+    Core Type : 64
+    L1D Group : 9
+    L2 Group  : 9
+    L3 Group  : 0
+  [11]
+    Index     : 10
+    Apic      : 10
+    Core Type : 64
+    L1D Group : 10
+    L2 Group  : 10
+    L3 Group  : 0
+  [12]
+    Index     : 11
+    Apic      : 11
+    Core Type : 64
+    L1D Group : 11
+    L2 Group  : 11
+    L3 Group  : 0
+  [13]
+    Index     : 12
+    Apic      : 12
+    Core Type : 64
+    L1D Group : 12
+    L2 Group  : 12
+    L3 Group  : 0
+  [14]
+    Index     : 13
+    Apic      : 13
+    Core Type : 64
+    L1D Group : 13
+    L2 Group  : 13
+    L3 Group  : 0
+  [15]
+    Index     : 14
+    Apic      : 14
+    Core Type : 64
+    L1D Group : 14
+    L2 Group  : 14
+    L3 Group  : 0
+  [16]
+    Index     : 15
+    Apic      : 15
+    Core Type : 64
+    L1D Group : 15
+    L2 Group  : 15
+    L3 Group  : 0
+  [17]
+    Index     : 16
+    Apic      : 16
+    Core Type : 64
+    L1D Group : 16
+    L2 Group  : 16
+    L3 Group  : 0
+  [18]
+    Index     : 17
+    Apic      : 17
+    Core Type : 64
+    L1D Group : 17
+    L2 Group  : 17
+    L3 Group  : 0
+  [19]
+    Index     : 18
+    Apic      : 18
+    Core Type : 64
+    L1D Group : 18
+    L2 Group  : 18
+    L3 Group  : 0
+  [20]
+    Index     : 19
+    Apic      : 19
+    Core Type : 64
+    L1D Group : 19
+    L2 Group  : 19
+    L3 Group  : 0
+  [21]
+    Index     : 20
+    Apic      : 20
+    Core Type : 64
+    L1D Group : 20
+    L2 Group  : 20
+    L3 Group  : 0
+  [22]
+    Index     : 21
+    Apic      : 21
+    Core Type : 64
+    L1D Group : 21
+    L2 Group  : 21
+    L3 Group  : 0
+  [23]
+    Index     : 22
+    Apic      : 22
+    Core Type : 64
+    L1D Group : 22
+    L2 Group  : 22
+    L3 Group  : 0
+  [24]
+    Index     : 23
+    Apic      : 23
+    Core Type : 64
+    L1D Group : 23
+    L2 Group  : 23
+    L3 Group  : 0
+  [25]
+    Index     : 24
+    Apic      : 24
+    Core Type : 64
+    L1D Group : 24
+    L2 Group  : 24
+    L3 Group  : 0
+  [26]
+    Index     : 25
+    Apic      : 25
+    Core Type : 64
+    L1D Group : 25
+    L2 Group  : 25
+    L3 Group  : 0
+  [27]
+    Index     : 26
+    Apic      : 26
+    Core Type : 64
+    L1D Group : 26
+    L2 Group  : 26
+    L3 Group  : 0
+  [28]
+    Index     : 27
+    Apic      : 27
+    Core Type : 64
+    L1D Group : 27
+    L2 Group  : 27
+    L3 Group  : 0
+  [29]
+    Index     : 28
+    Apic      : 28
+    Core Type : 64
+    L1D Group : 28
+    L2 Group  : 28
+    L3 Group  : 0
+  [30]
+    Index     : 29
+    Apic      : 29
+    Core Type : 64
+    L1D Group : 29
+    L2 Group  : 29
+    L3 Group  : 0
+  [31]
+    Index     : 30
+    Apic      : 30
+    Core Type : 64
+    L1D Group : 30
+    L2 Group  : 30
+    L3 Group  : 0
+  [32]
+    Index     : 31
+    Apic      : 31
+    Core Type : 64
+    L1D Group : 31
+    L2 Group  : 31
+    L3 Group  : 0
+Kernel Helper:
+  Available             : False
+  Presence              : absent
+  Driver Version        : None
+  Protocol Version      : 1
+  Protocol Compatible   : True
+  Processor Count       : 0
+  Msr Whitelist Version : 1.1-intel
+  Source                : kernel_helper
+  Error                 : Driver not loaded or broker not found
+  Status Text           : Not Available
+  Capabilities:
+    Raw Flags:
+      <empty>
+    Decoded:
+      <empty>
+Kernel Temperatures:
+  Available : False
+  Error     : Driver not loaded or broker not found
+  Source    : kernel_helper
+  Temperatures:
+    <empty>
+Kernel Power:
+  Available : False
+  Error     : Driver not loaded or broker not found
+  Source    : kernel_helper
+  Pl1:
+    <empty>
+  Pl2:
+    <empty>
+  Rapl:
+    <empty>
+Kernel Tdp:
+  Available : False
+  Error     : Kernel helper not available
+  Phase     : Future
+Kernel Microcode:
+  Available : False
+  Error     : Kernel helper not available
+  Phase     : Future
+Kernel Package Power:
+  Available     : False
+  Error         : Driver not loaded or broker not found
+  Package Watts : 0
+  Source        : kernel_helper
+Kernel Ipc:
+  Available : False
+  Error     : Driver not loaded or broker not found
+  Source    : kernel_helper
+Kernel Turbo:
+  Available   : False
+  Error       : Driver not loaded or broker not found
+  Phase       : Phase 3
+  Source      : kernel_helper
+  Description : Kernel driver not loaded
+  Turbo Ratios:
+    <empty>
+Kernel Cstates:
+  Available   : False
+  Error       : Driver not loaded or broker not found
+  Phase       : Phase 3
+  Source      : kernel_helper
+  Description : Kernel driver not loaded
+  C States:
+    <empty>
+
+╔══════════════════════════════════════════════════════════════╗
+║                      MEMORY INFORMATION                      ║
+╚══════════════════════════════════════════════════════════════╝
+
+Total               : 30.98
+Used                : 23.46
+Available           : 7.52
+Percent             : 75.70
+Module Count        : 0
+Ecc Status          : Unknown
+Form Factor         : Not reported by system API
+Cas Latency         : Not reported by system API
+Rank Info           : Not reported by system API
+Bank Info           : Not reported by system API
+Controller Info     : lscpu: IMC per NUMA node - NUMA node(s):                            1
+Numa Mapping        : lscpu: NUMA Enabled - NUMA node(s):                            1
+Max Supported Speed : Not reported by system API
+Modules:
+  <empty>
+Channel Info:
+  Channels    : 0
+  Description : Not reported by system API
+Memory Temp:
+  <empty>
+Spd Timing:
+  Cas : Not reported by system API
+  Ras : Not reported by system API
+  Rcd : Not reported by system API
+  Rp  : Not reported by system API
+Spd Helper:
+  Available    : False
+  Error        : SPD helper error: [Errno 13] Permission denied: '/home/halfax/Desktop/projects/somethingfun/spd_helper.exe'
+  Memory Array : None
+  Dimms:
+    <empty>
+
+╔══════════════════════════════════════════════════════════════╗
+║                       GPU INFORMATION                        ║
+╚══════════════════════════════════════════════════════════════╝
+
+<empty>
+
+╔══════════════════════════════════════════════════════════════╗
+║                       DISK INFORMATION                       ║
+╚══════════════════════════════════════════════════════════════╝
+
+[1] sysfs
+  Device     : sysfs
+  Mountpoint : /sys
+  Fstype     : sysfs
+  Opts       : rw,nosuid,nodev,noexec,relatime
+  Source     : psutil
+  Total      : 0
+  Used       : 0
+  Free       : 0
+  Percent    : 0.00
+[2] proc
+  Device     : proc
+  Mountpoint : /proc
+  Fstype     : proc
+  Opts       : rw,nosuid,nodev,noexec,relatime
+  Source     : psutil
+  Total      : 0
+  Used       : 0
+  Free       : 0
+  Percent    : 0.00
+[3] udev
+  Device     : udev
+  Mountpoint : /dev
+  Fstype     : devtmpfs
+  Opts       : rw,nosuid,relatime,size=16163840k,nr_inodes=4040960,mode=755,inode64
+  Source     : psutil
+  Total      : 16551772160
+  Used       : 0
+  Free       : 16551772160
+  Percent    : 0.00
+[4] devpts
+  Device     : devpts
+  Mountpoint : /dev/pts
+  Fstype     : devpts
+  Opts       : rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000
+  Source     : psutil
+  Total      : 0
+  Used       : 0
+  Free       : 0
+  Percent    : 0.00
+[5] tmpfs
+  Device     : tmpfs
+  Mountpoint : /run
+  Fstype     : tmpfs
+  Opts       : rw,nosuid,nodev,noexec,relatime,size=3248520k,mode=755,inode64
+  Source     : psutil
+  Total      : 3326484480
+  Used       : 4780032
+  Free       : 3321704448
+  Percent    : 0.10
+[6] efivarfs
+  Device     : efivarfs
+  Mountpoint : /sys/firmware/efi/efivars
+  Fstype     : efivarfs
+  Opts       : rw,nosuid,nodev,noexec,relatime
+  Source     : psutil
+  Total      : 131072
+  Used       : 50453
+  Free       : 75499
+  Percent    : 40.10
+[7] nvme1n1
+  Device      : nvme1n1
+  Mountpoint  : /
+  Fstype      : ext4
+  Opts        : rw,relatime,stripe=64
+  Source      : lsblk
+  Total       : 195722883072
+  Used        : 69955612672
+  Free        : 115750486016
+  Percent     : 37.70
+  Read Count  : 2892324
+  Write Count : 2751404
+  Read Bytes  : 190658926592
+  Write Bytes : 240963768320
+  Read Time   : 614123
+  Write Time  : 2982708
+  Model       : None
+  Size        : 1.8T
+  Vendor      : None
+  Serial      : None
+  Rotational  : False
+[8] securityfs
+  Device     : securityfs
+  Mountpoint : /sys/kernel/security
+  Fstype     : securityfs
+  Opts       : rw,nosuid,nodev,noexec,relatime
+  Source     : psutil
+  Total      : 0
+  Used       : 0
+  Free       : 0
+  Percent    : 0.00
+[9] tmpfs
+  Device     : tmpfs
+  Mountpoint : /dev/shm
+  Fstype     : tmpfs
+  Opts       : rw,nosuid,nodev,inode64
+  Source     : psutil
+  Total      : 16632406016
+  Used       : 1081344
+  Free       : 16631324672
+  Percent    : 0.00
+[10] tmpfs
+  Device     : tmpfs
+  Mountpoint : /run/lock
+  Fstype     : tmpfs
+  Opts       : rw,nosuid,nodev,noexec,relatime,size=5120k,inode64
+  Source     : psutil
+  Total      : 5242880
+  Used       : 12288
+  Free       : 5230592
+  Percent    : 0.20
+[11] cgroup2
+  Device     : cgroup2
+  Mountpoint : /sys/fs/cgroup
+  Fstype     : cgroup2
+  Opts       : rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot
+  Source     : psutil
+  Total      : 0
+  Used       : 0
+  Free       : 0
+  Percent    : 0.00
+[12] /sys/fs/pstore
+  Device     : 
+  Mountpoint : /sys/fs/pstore
+  Fstype     : pstore
+  Opts       : rw,nosuid,nodev,noexec,relatime
+  Source     : psutil
+  Total      : 0
+  Used       : 0
+  Free       : 0
+  Percent    : 0.00
+[13] bpf
+  Device     : bpf
+  Mountpoint : /sys/fs/bpf
+  Fstype     : bpf
+  Opts       : rw,nosuid,nodev,noexec,relatime,mode=700
+  Source     : psutil
+  Total      : 0
+  Used       : 0
+  Free       : 0
+  Percent    : 0.00
+[14] systemd-1
+  Device     : systemd-1
+  Mountpoint : /proc/sys/fs/binfmt_misc
+  Fstype     : autofs
+  Opts       : rw,relatime,fd=32,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=8898
+  Source     : psutil
+  Total      : 0
+  Used       : 0
+  Free       : 0
+  Percent    : 0.00
+[15] hugetlbfs
+  Device     : hugetlbfs
+  Mountpoint : /dev/hugepages
+  Fstype     : hugetlbfs
+  Opts       : rw,nosuid,nodev,relatime,pagesize=2M
+  Source     : psutil
+  Total      : 0
+  Used       : 0
+  Free       : 0
+  Percent    : 0.00
+[16] mqueue
+  Device     : mqueue
+  Mountpoint : /dev/mqueue
+  Fstype     : mqueue
+  Opts       : rw,nosuid,nodev,noexec,relatime
+  Source     : psutil
+  Total      : 0
+  Used       : 0
+  Free       : 0
+  Percent    : 0.00
+[17] debugfs
+  Device     : debugfs
+  Mountpoint : /sys/kernel/debug
+  Fstype     : debugfs
+  Opts       : rw,nosuid,nodev,noexec,relatime
+  Source     : psutil
+  Total      : 0
+  Used       : 0
+  Free       : 0
+  Percent    : 0.00
+[18] tracefs
+  Device     : tracefs
+  Mountpoint : /sys/kernel/tracing
+  Fstype     : tracefs
+  Opts       : rw,nosuid,nodev,noexec,relatime
+  Source     : psutil
+  Total      : 0
+  Used       : 0
+  Free       : 0
+  Percent    : 0.00
+[19] fusectl
+  Device     : fusectl
+  Mountpoint : /sys/fs/fuse/connections
+  Fstype     : fusectl
+  Opts       : rw,nosuid,nodev,noexec,relatime
+  Source     : psutil
+  Total      : 0
+  Used       : 0
+  Free       : 0
+  Percent    : 0.00
+[20] configfs
+  Device     : configfs
+  Mountpoint : /sys/kernel/config
+  Fstype     : configfs
+  Opts       : rw,nosuid,nodev,noexec,relatime
+  Source     : psutil
+  Total      : 0
+  Used       : 0
+  Free       : 0
+  Percent    : 0.00
+[21] /dev/loop0
+  Device      : /dev/loop0
+  Mountpoint  : /snap/bare/5
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 131072
+  Used        : 131072
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 18
+  Write Count : 0
+  Read Bytes  : 23040
+  Write Bytes : 0
+  Read Time   : 0
+  Write Time  : 0
+[22] /dev/loop2
+  Device      : /dev/loop2
+  Mountpoint  : /snap/code/234
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 398721024
+  Used        : 398721024
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 1965
+  Write Count : 0
+  Read Bytes  : 6944768
+  Write Bytes : 0
+  Read Time   : 33
+  Write Time  : 0
+[23] /dev/loop3
+  Device      : /dev/loop3
+  Mountpoint  : /snap/core20/2717
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 66977792
+  Used        : 66977792
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 3559
+  Write Count : 0
+  Read Bytes  : 11860992
+  Write Bytes : 0
+  Read Time   : 89
+  Write Time  : 0
+[24] /dev/loop4
+  Device      : /dev/loop4
+  Mountpoint  : /snap/core20/2769
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 66977792
+  Used        : 66977792
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 4004
+  Write Count : 0
+  Read Bytes  : 12956672
+  Write Bytes : 0
+  Read Time   : 87
+  Write Time  : 0
+[25] /dev/loop5
+  Device      : /dev/loop5
+  Mountpoint  : /snap/core22/2339
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 77594624
+  Used        : 77594624
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 4734
+  Write Count : 0
+  Read Bytes  : 16386048
+  Write Bytes : 0
+  Read Time   : 103
+  Write Time  : 0
+[26] /dev/loop6
+  Device      : /dev/loop6
+  Mountpoint  : /snap/core22/2411
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 77594624
+  Used        : 77594624
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 4533
+  Write Count : 0
+  Read Bytes  : 15830016
+  Write Bytes : 0
+  Read Time   : 110
+  Write Time  : 0
+[27] /dev/loop7
+  Device      : /dev/loop7
+  Mountpoint  : /snap/core24/1499
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 70123520
+  Used        : 70123520
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 3238
+  Write Count : 0
+  Read Bytes  : 12252160
+  Write Bytes : 0
+  Read Time   : 88
+  Write Time  : 0
+[28] /dev/loop9
+  Device      : /dev/loop9
+  Mountpoint  : /snap/core24/1587
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 70123520
+  Used        : 70123520
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 4721
+  Write Count : 0
+  Read Bytes  : 32774144
+  Write Bytes : 0
+  Read Time   : 138
+  Write Time  : 0
+[29] /dev/loop10
+  Device      : /dev/loop10
+  Mountpoint  : /snap/firefox/8107
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 287047680
+  Used        : 287047680
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 158
+  Write Count : 0
+  Read Bytes  : 2390016
+  Write Bytes : 0
+  Read Time   : 18
+  Write Time  : 0
+[30] /dev/loop12
+  Device      : /dev/loop12
+  Mountpoint  : /snap/firmware-updater/224
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 17301504
+  Used        : 17301504
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 293
+  Write Count : 0
+  Read Bytes  : 10161664
+  Write Bytes : 0
+  Read Time   : 21
+  Write Time  : 0
+[31] /dev/loop13
+  Device      : /dev/loop13
+  Mountpoint  : /snap/gnome-42-2204/247
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 557187072
+  Used        : 557187072
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 5388
+  Write Count : 0
+  Read Bytes  : 19980288
+  Write Bytes : 0
+  Read Time   : 95
+  Write Time  : 0
+[32] /dev/loop14
+  Device      : /dev/loop14
+  Mountpoint  : /snap/gnome-46-2404/153
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 635568128
+  Used        : 635568128
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 8643
+  Write Count : 0
+  Read Bytes  : 78221312
+  Write Bytes : 0
+  Read Time   : 210
+  Write Time  : 0
+[33] /dev/loop15
+  Device      : /dev/loop15
+  Mountpoint  : /snap/gtk-common-themes/1535
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 96206848
+  Used        : 96206848
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 16559
+  Write Count : 0
+  Read Bytes  : 41613312
+  Write Bytes : 0
+  Read Time   : 116
+  Write Time  : 0
+[34] /dev/loop16
+  Device      : /dev/loop16
+  Mountpoint  : /snap/mesa-2404/1165
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 414187520
+  Used        : 414187520
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 407
+  Write Count : 0
+  Read Bytes  : 9565184
+  Write Bytes : 0
+  Read Time   : 40
+  Write Time  : 0
+[35] /dev/loop18
+  Device      : /dev/loop18
+  Mountpoint  : /snap/snap-store/1338
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 16384000
+  Used        : 16384000
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 89
+  Write Count : 0
+  Read Bytes  : 720384
+  Write Bytes : 0
+  Read Time   : 8
+  Write Time  : 0
+[36] /dev/loop20
+  Device      : /dev/loop20
+  Mountpoint  : /snap/snapd/26382
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 50724864
+  Used        : 50724864
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 146
+  Write Count : 0
+  Read Bytes  : 2111488
+  Write Bytes : 0
+  Read Time   : 10
+  Write Time  : 0
+[37] /dev/loop21
+  Device      : /dev/loop21
+  Mountpoint  : /snap/snapd-desktop-integration/343
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 655360
+  Used        : 655360
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 39
+  Write Count : 0
+  Read Bytes  : 122368
+  Write Bytes : 0
+  Read Time   : 2
+  Write Time  : 0
+[38] /dev/loop22
+  Device      : /dev/loop22
+  Mountpoint  : /snap/snapd-desktop-integration/361
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 655360
+  Used        : 655360
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 79
+  Write Count : 0
+  Read Bytes  : 919040
+  Write Bytes : 0
+  Read Time   : 4
+  Write Time  : 0
+[39] /dev/loop23
+  Device      : /dev/loop23
+  Mountpoint  : /snap/thunderbird/1043
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 238682112
+  Used        : 238682112
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 285
+  Write Count : 0
+  Read Bytes  : 2643968
+  Write Bytes : 0
+  Read Time   : 26
+  Write Time  : 0
+[40] /dev/loop24
+  Device      : /dev/loop24
+  Mountpoint  : /snap/thunderbird/1057
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 238682112
+  Used        : 238682112
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 330
+  Write Count : 0
+  Read Bytes  : 2769920
+  Write Bytes : 0
+  Read Time   : 28
+  Write Time  : 0
+[41] /dev/nvme1n1p1
+  Device      : /dev/nvme1n1p1
+  Mountpoint  : /boot/efi
+  Fstype      : vfat
+  Opts        : rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro
+  Source      : psutil
+  Total       : 1124999168
+  Used        : 6443008
+  Free        : 1118556160
+  Percent     : 0.60
+  Read Count  : 487
+  Write Count : 2
+  Read Bytes  : 11988992
+  Write Bytes : 1024
+  Read Time   : 142
+  Write Time  : 7
+[42] tmpfs
+  Device     : tmpfs
+  Mountpoint : /run/qemu
+  Fstype     : tmpfs
+  Opts       : rw,nosuid,nodev,relatime,mode=755,inode64
+  Source     : psutil
+  Total      : 16632406016
+  Used       : 0
+  Free       : 16632406016
+  Percent    : 0.00
+[43] /dev/nvme1n1p4
+  Device      : /dev/nvme1n1p4
+  Mountpoint  : /home
+  Fstype      : ext4
+  Opts        : rw,relatime,stripe=64
+  Source      : psutil
+  Total       : 1573013897216
+  Used        : 285233504256
+  Free        : 1207800156160
+  Percent     : 19.10
+  Read Count  : 3208922
+  Write Count : 678337
+  Read Bytes  : 733771765760
+  Write Bytes : 30294949888
+  Read Time   : 532722
+  Write Time  : 410404
+[44] binfmt_misc
+  Device     : binfmt_misc
+  Mountpoint : /proc/sys/fs/binfmt_misc
+  Fstype     : binfmt_misc
+  Opts       : rw,nosuid,nodev,noexec,relatime
+  Source     : psutil
+  Total      : 0
+  Used       : 0
+  Free       : 0
+  Percent    : 0.00
+[45] sda
+  Device      : sda
+  Mountpoint  : /data
+  Fstype      : ext4
+  Opts        : rw,noatime
+  Source      : lsblk
+  Total       : 7999325900800
+  Used        : 533337079808
+  Free        : 7465972043776
+  Percent     : 6.70
+  Read Count  : 48123
+  Write Count : 7
+  Read Bytes  : 487905280
+  Write Bytes : 32768
+  Read Time   : 226539
+  Write Time  : 32
+  Model       : None
+  Size        : 7.3T
+  Vendor      : None
+  Serial      : None
+  Rotational  : False
+[46] overlay
+  Device     : overlay
+  Mountpoint : /var/lib/docker/overlay2/56c7613e43f4b662809400eab88c64ecaa89543b8387123fb1f61a214a5b774d/merged
+  Fstype     : overlay
+  Opts       : rw,relatime,lowerdir=/var/lib/docker/overlay2/l/OVNOM5RA6LUJKFA3BWUX2NJAKV:/var/lib/docker/overlay2/l/WU6PGF2JQK5E7ORZSS4LHCLTIC,upperdir=/var/lib/docker/overlay2/56c7613e43f4b662809400eab88c64ecaa89543b8387123fb1f61a214a5b774d/diff,workdir=/var/lib/docker/overlay2/56c7613e43f4b662809400eab88c64ecaa89543b8387123fb1f61a214a5b774d/work,nouserxattr
+  Source     : psutil
+[47] overlay
+  Device     : overlay
+  Mountpoint : /var/lib/docker/overlay2/8129f3b73da8c32135538b1e80d01ed4a4d1fe188a560178fc050b65c97f2bcd/merged
+  Fstype     : overlay
+  Opts       : rw,relatime,lowerdir=/var/lib/docker/overlay2/l/FRRHA66WVZQL2TBASBFZ2JIGXJ:/var/lib/docker/overlay2/l/WU6PGF2JQK5E7ORZSS4LHCLTIC,upperdir=/var/lib/docker/overlay2/8129f3b73da8c32135538b1e80d01ed4a4d1fe188a560178fc050b65c97f2bcd/diff,workdir=/var/lib/docker/overlay2/8129f3b73da8c32135538b1e80d01ed4a4d1fe188a560178fc050b65c97f2bcd/work,nouserxattr
+  Source     : psutil
+[48] overlay
+  Device     : overlay
+  Mountpoint : /var/lib/docker/overlay2/8bc62426406167e56aacda13a9798fe7be8422ee2bf10d25d88dab3e388d7c6c/merged
+  Fstype     : overlay
+  Opts       : rw,relatime,lowerdir=/var/lib/docker/overlay2/l/MDOV5S32A7T6G57BN4AOGD3U6Z:/var/lib/docker/overlay2/l/WU6PGF2JQK5E7ORZSS4LHCLTIC,upperdir=/var/lib/docker/overlay2/8bc62426406167e56aacda13a9798fe7be8422ee2bf10d25d88dab3e388d7c6c/diff,workdir=/var/lib/docker/overlay2/8bc62426406167e56aacda13a9798fe7be8422ee2bf10d25d88dab3e388d7c6c/work,nouserxattr
+  Source     : psutil
+[49] overlay
+  Device     : overlay
+  Mountpoint : /var/lib/docker/overlay2/edc8b5d0f2b289b43a95fded924b61b07341d9e0e67b54dd16f97a24f4bd78db/merged
+  Fstype     : overlay
+  Opts       : rw,relatime,lowerdir=/var/lib/docker/overlay2/l/ZRWSGJ2XEVSLMRNZRBFS4747BW:/var/lib/docker/overlay2/l/WU6PGF2JQK5E7ORZSS4LHCLTIC,upperdir=/var/lib/docker/overlay2/edc8b5d0f2b289b43a95fded924b61b07341d9e0e67b54dd16f97a24f4bd78db/diff,workdir=/var/lib/docker/overlay2/edc8b5d0f2b289b43a95fded924b61b07341d9e0e67b54dd16f97a24f4bd78db/work,nouserxattr
+  Source     : psutil
+[50] overlay
+  Device     : overlay
+  Mountpoint : /var/lib/docker/overlay2/b713d4d9ee241aa22941b8dbc53fc641d40accd19729a3fcac62ab16b317c2de/merged
+  Fstype     : overlay
+  Opts       : rw,relatime,lowerdir=/var/lib/docker/overlay2/l/Y5GRAGAOORBB5EY64OX2NY4JEJ:/var/lib/docker/overlay2/l/WU6PGF2JQK5E7ORZSS4LHCLTIC,upperdir=/var/lib/docker/overlay2/b713d4d9ee241aa22941b8dbc53fc641d40accd19729a3fcac62ab16b317c2de/diff,workdir=/var/lib/docker/overlay2/b713d4d9ee241aa22941b8dbc53fc641d40accd19729a3fcac62ab16b317c2de/work,nouserxattr
+  Source     : psutil
+[51] overlay
+  Device     : overlay
+  Mountpoint : /var/lib/docker/overlay2/e7312e367ac78313ddd64ebe665a8b1e38641c5e06f983dd1b03a447c36b521b/merged
+  Fstype     : overlay
+  Opts       : rw,relatime,lowerdir=/var/lib/docker/overlay2/l/62FV7BTDAA6ZBDJFCW4TXFKD7W:/var/lib/docker/overlay2/l/AN24ZXYFKETE7MEPB35KDFGXC5:/var/lib/docker/overlay2/l/VXYDXL56A7SDNH4NTJGTQQXXAG:/var/lib/docker/overlay2/l/HR3FNVYLVLCZCIO5B6TQ6WFUPE:/var/lib/docker/overlay2/l/YKATVKEZP7KYGVMYLJMBB5VATK,upperdir=/var/lib/docker/overlay2/e7312e367ac78313ddd64ebe665a8b1e38641c5e06f983dd1b03a447c36b521b/diff,workdir=/var/lib/docker/overlay2/e7312e367ac78313ddd64ebe665a8b1e38641c5e06f983dd1b03a447c36b521b/work,nouserxattr
+  Source     : psutil
+[52] overlay
+  Device     : overlay
+  Mountpoint : /var/lib/docker/overlay2/f2fed205df08ab37de315beb2315851ba2c74d8cd11506ad175ae68952a3d6e5/merged
+  Fstype     : overlay
+  Opts       : rw,relatime,lowerdir=/var/lib/docker/overlay2/l/EMVX3VQBXYSUDBBQBZRSRXN4HE:/var/lib/docker/overlay2/l/MF5XQLXNMHGNQA4ZOVWW3YWAZF:/var/lib/docker/overlay2/l/C7ZK2OQ6QBCVPN2AKHI37PPHEH:/var/lib/docker/overlay2/l/H6QDVTJWUXHBIS45H56YNVHSO5:/var/lib/docker/overlay2/l/GZUXDPEMOCNWQAVIFACTTIRXPD:/var/lib/docker/overlay2/l/V2DVM2M6XYRT5TXHJRFVM64GBK:/var/lib/docker/overlay2/l/7MDYEFBJKF3PXVRPFDSGDPTJKE:/var/lib/docker/overlay2/l/Y2BUI76AC62TDPZFPNMRFDISD2:/var/lib/docker/overlay2/l/GHMKMHKEO55MQNZWNR5WJ5NJIK,upperdir=/var/lib/docker/overlay2/f2fed205df08ab37de315beb2315851ba2c74d8cd11506ad175ae68952a3d6e5/diff,workdir=/var/lib/docker/overlay2/f2fed205df08ab37de315beb2315851ba2c74d8cd11506ad175ae68952a3d6e5/work,nouserxattr
+  Source     : psutil
+[53] overlay
+  Device     : overlay
+  Mountpoint : /var/lib/docker/overlay2/6f744e650989a4084d0122ded4824836c62b88985679c61ac9e29c077ca456c1/merged
+  Fstype     : overlay
+  Opts       : rw,relatime,lowerdir=/var/lib/docker/overlay2/l/C642T2PSWYFRRDDTULEKKXPSDQ:/var/lib/docker/overlay2/l/IKDAKJT2UQHYZ7K7EO23KPS3LS:/var/lib/docker/overlay2/l/CQNXAC56DAU7BTRLZAWTNJOF66:/var/lib/docker/overlay2/l/TC4REPTRRN4LVQQ2RZFXHWYCCW:/var/lib/docker/overlay2/l/EDAZTZQRQLXTSODRS2WUR5BKBW:/var/lib/docker/overlay2/l/QUZ4BF2FC3FNTVF4JKZHRFB6HG:/var/lib/docker/overlay2/l/XYXA6QW5R74ZXFDVLEQ4G3YUL5:/var/lib/docker/overlay2/l/Z3X5MGCZDFISJ4MGMWJBX2Y6XU:/var/lib/docker/overlay2/l/MXHZPZYH2DNLGTZ4PANWSUU3P7:/var/lib/docker/overlay2/l/LWOGJLWVB3WM6KJF7IAJINKGSU:/var/lib/docker/overlay2/l/GKU7XUZH2RVCJ2EKOFN2O2KCH4,upperdir=/var/lib/docker/overlay2/6f744e650989a4084d0122ded4824836c62b88985679c61ac9e29c077ca456c1/diff,workdir=/var/lib/docker/overlay2/6f744e650989a4084d0122ded4824836c62b88985679c61ac9e29c077ca456c1/work,nouserxattr
+  Source     : psutil
+[54] overlay
+  Device     : overlay
+  Mountpoint : /var/lib/docker/overlay2/60f93119fcd18845f76eb0bd3c95fb24837590c2847b3b9da61a4fd76d596bdc/merged
+  Fstype     : overlay
+  Opts       : rw,relatime,lowerdir=/var/lib/docker/overlay2/l/7GQKVOACEPWI7CGYS4C6576JIS:/var/lib/docker/overlay2/l/M52VZRFTPLS5KYOQNJC5YQIFNI:/var/lib/docker/overlay2/l/7OK7N73FC5477HZWRNWWYTOLMX:/var/lib/docker/overlay2/l/2VHHCIRY2SRPEYXVV322GIGMNU:/var/lib/docker/overlay2/l/S62H2RN24C5L2BDRZBTFT52TH5:/var/lib/docker/overlay2/l/SOGRDMRGHRUXSGJ6QTYD5KJUWR:/var/lib/docker/overlay2/l/7XE4AKGG4NWPFNVNO7MKVCIYVB:/var/lib/docker/overlay2/l/GGE4U52Y6KYCF3WWHTFGCJ5PYE:/var/lib/docker/overlay2/l/Y346QLQHETIIJ72WK3FC2HXFTI:/var/lib/docker/overlay2/l/TKI3BCZ55S3L3MK5UYBXWZXRMX:/var/lib/docker/overlay2/l/7VCZZ3OD2QEGHIHPFML73S3WP5:/var/lib/docker/overlay2/l/4DUNO3LJJIKKIO4INPSJM6FKAA:/var/lib/docker/overlay2/l/EQ6CQFKCE2LI42ZCBAVQYJXXOL:/var/lib/docker/overlay2/l/A75WBF6VJLYVKFYY5DUQJKTMKS,upperdir=/var/lib/docker/overlay2/60f93119fcd18845f76eb0bd3c95fb24837590c2847b3b9da61a4fd76d596bdc/diff,workdir=/var/lib/docker/overlay2/60f93119fcd18845f76eb0bd3c95fb24837590c2847b3b9da61a4fd76d596bdc/work,nouserxattr
+  Source     : psutil
+[55] nsfs
+  Device     : nsfs
+  Mountpoint : /run/docker/netns/23bc69cd8058
+  Fstype     : nsfs
+  Opts       : rw
+  Source     : psutil
+[56] nsfs
+  Device     : nsfs
+  Mountpoint : /run/docker/netns/0f92981f1d18
+  Fstype     : nsfs
+  Opts       : rw
+  Source     : psutil
+[57] nsfs
+  Device     : nsfs
+  Mountpoint : /run/docker/netns/e88e6565247d
+  Fstype     : nsfs
+  Opts       : rw
+  Source     : psutil
+[58] nsfs
+  Device     : nsfs
+  Mountpoint : /run/docker/netns/9185e312c745
+  Fstype     : nsfs
+  Opts       : rw
+  Source     : psutil
+[59] nsfs
+  Device     : nsfs
+  Mountpoint : /run/docker/netns/7d6bded72778
+  Fstype     : nsfs
+  Opts       : rw
+  Source     : psutil
+[60] nsfs
+  Device     : nsfs
+  Mountpoint : /run/docker/netns/90525f7f8028
+  Fstype     : nsfs
+  Opts       : rw
+  Source     : psutil
+[61] nsfs
+  Device     : nsfs
+  Mountpoint : /run/docker/netns/fc947d179fef
+  Fstype     : nsfs
+  Opts       : rw
+  Source     : psutil
+[62] nsfs
+  Device     : nsfs
+  Mountpoint : /run/docker/netns/b71df3ec4f8c
+  Fstype     : nsfs
+  Opts       : rw
+  Source     : psutil
+[63] nsfs
+  Device     : nsfs
+  Mountpoint : /run/docker/netns/62d9e77feb2c
+  Fstype     : nsfs
+  Opts       : rw
+  Source     : psutil
+[64] overlay
+  Device     : overlay
+  Mountpoint : /var/lib/docker/overlay2/d92d1bc413217526d2c343f44efdb669ed30ae49d07bce2a4593a80bf0c40241/merged
+  Fstype     : overlay
+  Opts       : rw,relatime,lowerdir=/var/lib/docker/overlay2/l/5FVGL2PXHQT3LTICEBGLYSULJ5:/var/lib/docker/overlay2/l/SNGR6JF547BYFOX52GQJAG7QU2:/var/lib/docker/overlay2/l/IHGXDKZVCS7OY42D53SRORTIJI:/var/lib/docker/overlay2/l/QJA64RREF44DZQTGXBUURQNXOI:/var/lib/docker/overlay2/l/NYG3KVTKHLLAQ5FV2QCAUPWGVL,upperdir=/var/lib/docker/overlay2/d92d1bc413217526d2c343f44efdb669ed30ae49d07bce2a4593a80bf0c40241/diff,workdir=/var/lib/docker/overlay2/d92d1bc413217526d2c343f44efdb669ed30ae49d07bce2a4593a80bf0c40241/work,nouserxattr
+  Source     : psutil
+[65] tmpfs
+  Device     : tmpfs
+  Mountpoint : /run/user/120
+  Fstype     : tmpfs
+  Opts       : rw,nosuid,nodev,relatime,size=3248516k,nr_inodes=812129,mode=700,uid=120,gid=121,inode64
+  Source     : psutil
+  Total      : 3326480384
+  Used       : 98304
+  Free       : 3326382080
+  Percent    : 0.00
+[66] portal
+  Device     : portal
+  Mountpoint : /run/user/120/doc
+  Fstype     : fuse.portal
+  Opts       : rw,nosuid,nodev,relatime,user_id=120,group_id=121
+  Source     : psutil
+[67] tmpfs
+  Device     : tmpfs
+  Mountpoint : /run/snapd/ns
+  Fstype     : tmpfs
+  Opts       : rw,nosuid,nodev,noexec,relatime,size=3248520k,mode=755,inode64
+  Source     : psutil
+  Total      : 3326484480
+  Used       : 4780032
+  Free       : 3321704448
+  Percent    : 0.10
+[68] nsfs
+  Device     : nsfs
+  Mountpoint : /run/snapd/ns/snapd-desktop-integration.mnt
+  Fstype     : nsfs
+  Opts       : rw
+  Source     : psutil
+  Total      : 0
+  Used       : 0
+  Free       : 0
+  Percent    : 0.00
+[69] /dev/loop25
+  Device      : /dev/loop25
+  Mountpoint  : /snap/snapd/26865
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 51773440
+  Used        : 51773440
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 3829
+  Write Count : 0
+  Read Bytes  : 160267264
+  Write Bytes : 0
+  Read Time   : 243
+  Write Time  : 0
+[70] /dev/loop19
+  Device      : /dev/loop19
+  Mountpoint  : /snap/code/235
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 398852096
+  Used        : 398852096
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 1205
+  Write Count : 0
+  Read Bytes  : 4492288
+  Write Bytes : 0
+  Read Time   : 22
+  Write Time  : 0
+[71] /dev/loop1
+  Device      : /dev/loop1
+  Mountpoint  : /snap/snap-store/1367
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 16515072
+  Used        : 16515072
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 861
+  Write Count : 0
+  Read Bytes  : 4374528
+  Write Bytes : 0
+  Read Time   : 26
+  Write Time  : 0
+[72] nsfs
+  Device     : nsfs
+  Mountpoint : /run/snapd/ns/snap-store.mnt
+  Fstype     : nsfs
+  Opts       : rw
+  Source     : psutil
+  Total      : 0
+  Used       : 0
+  Free       : 0
+  Percent    : 0.00
+[73] /dev/loop17
+  Device      : /dev/loop17
+  Mountpoint  : /snap/firmware-updater/226
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 17301504
+  Used        : 17301504
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 395
+  Write Count : 0
+  Read Bytes  : 13161984
+  Write Bytes : 0
+  Read Time   : 19
+  Write Time  : 0
+[74] nsfs
+  Device     : nsfs
+  Mountpoint : /run/snapd/ns/firmware-updater.mnt
+  Fstype     : nsfs
+  Opts       : rw
+  Source     : psutil
+  Total      : 0
+  Used       : 0
+  Free       : 0
+  Percent    : 0.00
+[75] /dev/loop11
+  Device      : /dev/loop11
+  Mountpoint  : /snap/firefox/8191
+  Fstype      : squashfs
+  Opts        : ro,nodev,relatime,errors=continue,threads=single
+  Source      : psutil
+  Total       : 288227328
+  Used        : 288227328
+  Free        : 0
+  Percent     : 100.00
+  Read Count  : 193
+  Write Count : 0
+  Read Bytes  : 1971712
+  Write Bytes : 0
+  Read Time   : 9
+  Write Time  : 0
+[76] nsfs
+  Device     : nsfs
+  Mountpoint : /run/snapd/ns/firefox.mnt
+  Fstype     : nsfs
+  Opts       : rw
+  Source     : psutil
+  Total      : 0
+  Used       : 0
+  Free       : 0
+  Percent    : 0.00
+[77] tmpfs
+  Device     : tmpfs
+  Mountpoint : /run/user/1000
+  Fstype     : tmpfs
+  Opts       : rw,nosuid,nodev,relatime,size=3248516k,nr_inodes=812129,mode=700,uid=1000,gid=1000,inode64
+  Source     : psutil
+  Total      : 3326480384
+  Used       : 86016
+  Free       : 3326394368
+  Percent    : 0.00
+[78] portal
+  Device     : portal
+  Mountpoint : /run/user/1000/doc
+  Fstype     : fuse.portal
+  Opts       : rw,nosuid,nodev,relatime,user_id=1000,group_id=1000
+  Source     : psutil
+[79] nvme0n1
+  Device     : nvme0n1
+  Model      : None
+  Size       : 1.8T
+  Vendor     : None
+  Serial     : None
+  Rotational : False
+  Source     : lsblk
+
+╔══════════════════════════════════════════════════════════════╗
+║                     DISPLAY INFORMATION                      ║
+╚══════════════════════════════════════════════════════════════╝
+
+[1] Display (Headless or SSH)
+  Name           : Display (Headless or SSH)
+  Resolution     : N/A
+  Refresh Rate   : N/A
+  Bits Per Pixel : N/A
+  Source         : Fallback
+
+╔══════════════════════════════════════════════════════════════╗
+║                     NETWORK INFORMATION                      ║
+╚══════════════════════════════════════════════════════════════╝
+
+Connections : 204
+Error       : None
+Interfaces:
+  [1] lo
+    Name   : lo
+    Is Up  : True
+    Mtu    : 65536
+    Speed  : 0
+    Source : psutil
+    Addresses:
+      [1]
+        Family    : AF_INET
+        Address   : 127.0.0.1
+        Netmask   : 255.0.0.0
+        Broadcast : N/A
+      [2]
+        Family    : AF_INET6
+        Address   : ::1
+        Netmask   : ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
+        Broadcast : N/A
+      [3]
+        Family    : AF_PACKET
+        Address   : 00:00:00:00:00:00
+        Netmask   : N/A
+        Broadcast : N/A
+      [4]
+        Family  : IPv4
+        Address : 192.168.0.59
+        Source  : ip_command
+      [5]
+        Family  : IPv4
+        Address : 192.168.0.84
+        Source  : ip_command
+      [6]
+        Family  : IPv4
+        Address : 172.16.30.1
+        Source  : ip_command
+      [7]
+        Family  : IPv4
+        Address : 100.87.249.53
+        Source  : ip_command
+      [8]
+        Family  : IPv4
+        Address : 172.19.0.1
+        Source  : ip_command
+      [9]
+        Family  : IPv4
+        Address : 172.17.0.1
+        Source  : ip_command
+      [10]
+        Family  : IPv4
+        Address : 172.18.0.1
+        Source  : ip_command
+      [11]
+        Family  : IPv4
+        Address : 172.21.0.1
+        Source  : ip_command
+      [12]
+        Family  : IPv4
+        Address : 172.20.0.1
+        Source  : ip_command
+  [2] eno1
+    Name   : eno1
+    Is Up  : True
+    Mtu    : 1500
+    Speed  : 1000
+    Source : psutil
+    Addresses:
+      [1]
+        Family    : AF_INET
+        Address   : 192.168.0.59
+        Netmask   : 255.255.255.0
+        Broadcast : 192.168.0.255
+      [2]
+        Family    : AF_INET6
+        Address   : fe80::9160:7c40:3fca:8f11%eno1
+        Netmask   : ffff:ffff:ffff:ffff::
+        Broadcast : N/A
+      [3]
+        Family    : AF_PACKET
+        Address   : 84:47:09:6c:e6:81
+        Netmask   : N/A
+        Broadcast : ff:ff:ff:ff:ff:ff
+      [4]
+        Family  : IPv4
+        Address : 192.168.0.59
+        Source  : ip_command
+      [5]
+        Family  : IPv4
+        Address : 192.168.0.84
+        Source  : ip_command
+      [6]
+        Family  : IPv4
+        Address : 172.16.30.1
+        Source  : ip_command
+      [7]
+        Family  : IPv4
+        Address : 100.87.249.53
+        Source  : ip_command
+      [8]
+        Family  : IPv4
+        Address : 172.19.0.1
+        Source  : ip_command
+      [9]
+        Family  : IPv4
+        Address : 172.17.0.1
+        Source  : ip_command
+      [10]
+        Family  : IPv4
+        Address : 172.18.0.1
+        Source  : ip_command
+      [11]
+        Family  : IPv4
+        Address : 172.21.0.1
+        Source  : ip_command
+      [12]
+        Family  : IPv4
+        Address : 172.20.0.1
+        Source  : ip_command
+  [3] wlp195s0
+    Name   : wlp195s0
+    Is Up  : True
+    Mtu    : 1500
+    Speed  : 0
+    Source : psutil
+    Addresses:
+      [1]
+        Family    : AF_INET
+        Address   : 192.168.0.84
+        Netmask   : 255.255.255.0
+        Broadcast : 192.168.0.255
+      [2]
+        Family    : AF_INET6
+        Address   : fe80::7bf2:8799:9199:a911%wlp195s0
+        Netmask   : ffff:ffff:ffff:ffff::
+        Broadcast : N/A
+      [3]
+        Family    : AF_PACKET
+        Address   : ac:f2:3c:35:1a:9d
+        Netmask   : N/A
+        Broadcast : ff:ff:ff:ff:ff:ff
+      [4]
+        Family  : IPv4
+        Address : 192.168.0.59
+        Source  : ip_command
+      [5]
+        Family  : IPv4
+        Address : 192.168.0.84
+        Source  : ip_command
+      [6]
+        Family  : IPv4
+        Address : 172.16.30.1
+        Source  : ip_command
+      [7]
+        Family  : IPv4
+        Address : 100.87.249.53
+        Source  : ip_command
+      [8]
+        Family  : IPv4
+        Address : 172.19.0.1
+        Source  : ip_command
+      [9]
+        Family  : IPv4
+        Address : 172.17.0.1
+        Source  : ip_command
+      [10]
+        Family  : IPv4
+        Address : 172.18.0.1
+        Source  : ip_command
+      [11]
+        Family  : IPv4
+        Address : 172.21.0.1
+        Source  : ip_command
+      [12]
+        Family  : IPv4
+        Address : 172.20.0.1
+        Source  : ip_command
+  [4] virbr1
+    Name   : virbr1
+    Is Up  : False
+    Mtu    : 1500
+    Speed  : 0
+    Source : psutil
+    Addresses:
+      [1]
+        Family    : AF_INET
+        Address   : 172.16.30.1
+        Netmask   : 255.255.255.0
+        Broadcast : 172.16.30.255
+      [2]
+        Family    : AF_PACKET
+        Address   : 52:54:00:97:3f:9c
+        Netmask   : N/A
+        Broadcast : ff:ff:ff:ff:ff:ff
+      [3]
+        Family  : IPv4
+        Address : 192.168.0.59
+        Source  : ip_command
+      [4]
+        Family  : IPv4
+        Address : 192.168.0.84
+        Source  : ip_command
+      [5]
+        Family  : IPv4
+        Address : 172.16.30.1
+        Source  : ip_command
+      [6]
+        Family  : IPv4
+        Address : 100.87.249.53
+        Source  : ip_command
+      [7]
+        Family  : IPv4
+        Address : 172.19.0.1
+        Source  : ip_command
+      [8]
+        Family  : IPv4
+        Address : 172.17.0.1
+        Source  : ip_command
+      [9]
+        Family  : IPv4
+        Address : 172.18.0.1
+        Source  : ip_command
+      [10]
+        Family  : IPv4
+        Address : 172.21.0.1
+        Source  : ip_command
+      [11]
+        Family  : IPv4
+        Address : 172.20.0.1
+        Source  : ip_command
+  [5] wt0
+    Name   : wt0
+    Is Up  : True
+    Mtu    : 1280
+    Speed  : 0
+    Source : psutil
+    Addresses:
+      [1]
+        Family    : AF_INET
+        Address   : 100.87.249.53
+        Netmask   : 255.255.0.0
+        Broadcast : N/A
+      [2]
+        Family  : IPv4
+        Address : 192.168.0.59
+        Source  : ip_command
+      [3]
+        Family  : IPv4
+        Address : 192.168.0.84
+        Source  : ip_command
+      [4]
+        Family  : IPv4
+        Address : 172.16.30.1
+        Source  : ip_command
+      [5]
+        Family  : IPv4
+        Address : 100.87.249.53
+        Source  : ip_command
+      [6]
+        Family  : IPv4
+        Address : 172.19.0.1
+        Source  : ip_command
+      [7]
+        Family  : IPv4
+        Address : 172.17.0.1
+        Source  : ip_command
+      [8]
+        Family  : IPv4
+        Address : 172.18.0.1
+        Source  : ip_command
+      [9]
+        Family  : IPv4
+        Address : 172.21.0.1
+        Source  : ip_command
+      [10]
+        Family  : IPv4
+        Address : 172.20.0.1
+        Source  : ip_command
+  [6] br-f26e1e0d88a5
+    Name   : br-f26e1e0d88a5
+    Is Up  : True
+    Mtu    : 1500
+    Speed  : 10000
+    Source : psutil
+    Addresses:
+      [1]
+        Family    : AF_INET
+        Address   : 172.19.0.1
+        Netmask   : 255.255.0.0
+        Broadcast : 172.19.255.255
+      [2]
+        Family    : AF_INET6
+        Address   : fe80::d8ff:8bff:fee4:5246%br-f26e1e0d88a5
+        Netmask   : ffff:ffff:ffff:ffff::
+        Broadcast : N/A
+      [3]
+        Family    : AF_PACKET
+        Address   : da:ff:8b:e4:52:46
+        Netmask   : N/A
+        Broadcast : ff:ff:ff:ff:ff:ff
+      [4]
+        Family  : IPv4
+        Address : 192.168.0.59
+        Source  : ip_command
+      [5]
+        Family  : IPv4
+        Address : 192.168.0.84
+        Source  : ip_command
+      [6]
+        Family  : IPv4
+        Address : 172.16.30.1
+        Source  : ip_command
+      [7]
+        Family  : IPv4
+        Address : 100.87.249.53
+        Source  : ip_command
+      [8]
+        Family  : IPv4
+        Address : 172.19.0.1
+        Source  : ip_command
+      [9]
+        Family  : IPv4
+        Address : 172.17.0.1
+        Source  : ip_command
+      [10]
+        Family  : IPv4
+        Address : 172.18.0.1
+        Source  : ip_command
+      [11]
+        Family  : IPv4
+        Address : 172.21.0.1
+        Source  : ip_command
+      [12]
+        Family  : IPv4
+        Address : 172.20.0.1
+        Source  : ip_command
+  [7] docker0
+    Name   : docker0
+    Is Up  : False
+    Mtu    : 1500
+    Speed  : 0
+    Source : psutil
+    Addresses:
+      [1]
+        Family    : AF_INET
+        Address   : 172.17.0.1
+        Netmask   : 255.255.0.0
+        Broadcast : 172.17.255.255
+      [2]
+        Family    : AF_PACKET
+        Address   : 42:06:51:df:76:21
+        Netmask   : N/A
+        Broadcast : ff:ff:ff:ff:ff:ff
+      [3]
+        Family  : IPv4
+        Address : 192.168.0.59
+        Source  : ip_command
+      [4]
+        Family  : IPv4
+        Address : 192.168.0.84
+        Source  : ip_command
+      [5]
+        Family  : IPv4
+        Address : 172.16.30.1
+        Source  : ip_command
+      [6]
+        Family  : IPv4
+        Address : 100.87.249.53
+        Source  : ip_command
+      [7]
+        Family  : IPv4
+        Address : 172.19.0.1
+        Source  : ip_command
+      [8]
+        Family  : IPv4
+        Address : 172.17.0.1
+        Source  : ip_command
+      [9]
+        Family  : IPv4
+        Address : 172.18.0.1
+        Source  : ip_command
+      [10]
+        Family  : IPv4
+        Address : 172.21.0.1
+        Source  : ip_command
+      [11]
+        Family  : IPv4
+        Address : 172.20.0.1
+        Source  : ip_command
+  [8] br-66444a4e0c8b
+    Name   : br-66444a4e0c8b
+    Is Up  : True
+    Mtu    : 1500
+    Speed  : 10000
+    Source : psutil
+    Addresses:
+      [1]
+        Family    : AF_INET
+        Address   : 172.18.0.1
+        Netmask   : 255.255.0.0
+        Broadcast : 172.18.255.255
+      [2]
+        Family    : AF_INET6
+        Address   : fe80::7cec:1fff:fe06:145d%br-66444a4e0c8b
+        Netmask   : ffff:ffff:ffff:ffff::
+        Broadcast : N/A
+      [3]
+        Family    : AF_PACKET
+        Address   : 7e:ec:1f:06:14:5d
+        Netmask   : N/A
+        Broadcast : ff:ff:ff:ff:ff:ff
+      [4]
+        Family  : IPv4
+        Address : 192.168.0.59
+        Source  : ip_command
+      [5]
+        Family  : IPv4
+        Address : 192.168.0.84
+        Source  : ip_command
+      [6]
+        Family  : IPv4
+        Address : 172.16.30.1
+        Source  : ip_command
+      [7]
+        Family  : IPv4
+        Address : 100.87.249.53
+        Source  : ip_command
+      [8]
+        Family  : IPv4
+        Address : 172.19.0.1
+        Source  : ip_command
+      [9]
+        Family  : IPv4
+        Address : 172.17.0.1
+        Source  : ip_command
+      [10]
+        Family  : IPv4
+        Address : 172.18.0.1
+        Source  : ip_command
+      [11]
+        Family  : IPv4
+        Address : 172.21.0.1
+        Source  : ip_command
+      [12]
+        Family  : IPv4
+        Address : 172.20.0.1
+        Source  : ip_command
+  [9] br-bbe9fdc9b10a
+    Name   : br-bbe9fdc9b10a
+    Is Up  : True
+    Mtu    : 1500
+    Speed  : 10000
+    Source : psutil
+    Addresses:
+      [1]
+        Family    : AF_INET
+        Address   : 172.21.0.1
+        Netmask   : 255.255.0.0
+        Broadcast : 172.21.255.255
+      [2]
+        Family    : AF_INET6
+        Address   : fe80::4813:95ff:fec9:81fc%br-bbe9fdc9b10a
+        Netmask   : ffff:ffff:ffff:ffff::
+        Broadcast : N/A
+      [3]
+        Family    : AF_PACKET
+        Address   : 4a:13:95:c9:81:fc
+        Netmask   : N/A
+        Broadcast : ff:ff:ff:ff:ff:ff
+      [4]
+        Family  : IPv4
+        Address : 192.168.0.59
+        Source  : ip_command
+      [5]
+        Family  : IPv4
+        Address : 192.168.0.84
+        Source  : ip_command
+      [6]
+        Family  : IPv4
+        Address : 172.16.30.1
+        Source  : ip_command
+      [7]
+        Family  : IPv4
+        Address : 100.87.249.53
+        Source  : ip_command
+      [8]
+        Family  : IPv4
+        Address : 172.19.0.1
+        Source  : ip_command
+      [9]
+        Family  : IPv4
+        Address : 172.17.0.1
+        Source  : ip_command
+      [10]
+        Family  : IPv4
+        Address : 172.18.0.1
+        Source  : ip_command
+      [11]
+        Family  : IPv4
+        Address : 172.21.0.1
+        Source  : ip_command
+      [12]
+        Family  : IPv4
+        Address : 172.20.0.1
+        Source  : ip_command
+  [10] br-ce1e51dcf193
+    Name   : br-ce1e51dcf193
+    Is Up  : True
+    Mtu    : 1500
+    Speed  : 10000
+    Source : psutil
+    Addresses:
+      [1]
+        Family    : AF_INET
+        Address   : 172.20.0.1
+        Netmask   : 255.255.0.0
+        Broadcast : 172.20.255.255
+      [2]
+        Family    : AF_INET6
+        Address   : fe80::1c83:e8ff:fe87:18f8%br-ce1e51dcf193
+        Netmask   : ffff:ffff:ffff:ffff::
+        Broadcast : N/A
+      [3]
+        Family    : AF_PACKET
+        Address   : 1e:83:e8:87:18:f8
+        Netmask   : N/A
+        Broadcast : ff:ff:ff:ff:ff:ff
+      [4]
+        Family  : IPv4
+        Address : 192.168.0.59
+        Source  : ip_command
+      [5]
+        Family  : IPv4
+        Address : 192.168.0.84
+        Source  : ip_command
+      [6]
+        Family  : IPv4
+        Address : 172.16.30.1
+        Source  : ip_command
+      [7]
+        Family  : IPv4
+        Address : 100.87.249.53
+        Source  : ip_command
+      [8]
+        Family  : IPv4
+        Address : 172.19.0.1
+        Source  : ip_command
+      [9]
+        Family  : IPv4
+        Address : 172.17.0.1
+        Source  : ip_command
+      [10]
+        Family  : IPv4
+        Address : 172.18.0.1
+        Source  : ip_command
+      [11]
+        Family  : IPv4
+        Address : 172.21.0.1
+        Source  : ip_command
+      [12]
+        Family  : IPv4
+        Address : 172.20.0.1
+        Source  : ip_command
+  [11] vethb4f71e7
+    Name   : vethb4f71e7
+    Is Up  : True
+    Mtu    : 1500
+    Speed  : 10000
+    Source : psutil
+    Addresses:
+      [1]
+        Family    : AF_INET6
+        Address   : fe80::8484:22ff:fe55:4339%vethb4f71e7
+        Netmask   : ffff:ffff:ffff:ffff::
+        Broadcast : N/A
+      [2]
+        Family    : AF_PACKET
+        Address   : 86:84:22:55:43:39
+        Netmask   : N/A
+        Broadcast : ff:ff:ff:ff:ff:ff
+      [3]
+        Family  : IPv4
+        Address : 192.168.0.59
+        Source  : ip_command
+      [4]
+        Family  : IPv4
+        Address : 192.168.0.84
+        Source  : ip_command
+      [5]
+        Family  : IPv4
+        Address : 172.16.30.1
+        Source  : ip_command
+      [6]
+        Family  : IPv4
+        Address : 100.87.249.53
+        Source  : ip_command
+      [7]
+        Family  : IPv4
+        Address : 172.19.0.1
+        Source  : ip_command
+      [8]
+        Family  : IPv4
+        Address : 172.17.0.1
+        Source  : ip_command
+      [9]
+        Family  : IPv4
+        Address : 172.18.0.1
+        Source  : ip_command
+      [10]
+        Family  : IPv4
+        Address : 172.21.0.1
+        Source  : ip_command
+      [11]
+        Family  : IPv4
+        Address : 172.20.0.1
+        Source  : ip_command
+  [12] veth969afb1
+    Name   : veth969afb1
+    Is Up  : True
+    Mtu    : 1500
+    Speed  : 10000
+    Source : psutil
+    Addresses:
+      [1]
+        Family    : AF_INET6
+        Address   : fe80::2cd3:87ff:fecc:57b7%veth969afb1
+        Netmask   : ffff:ffff:ffff:ffff::
+        Broadcast : N/A
+      [2]
+        Family    : AF_PACKET
+        Address   : 2e:d3:87:cc:57:b7
+        Netmask   : N/A
+        Broadcast : ff:ff:ff:ff:ff:ff
+      [3]
+        Family  : IPv4
+        Address : 192.168.0.59
+        Source  : ip_command
+      [4]
+        Family  : IPv4
+        Address : 192.168.0.84
+        Source  : ip_command
+      [5]
+        Family  : IPv4
+        Address : 172.16.30.1
+        Source  : ip_command
+      [6]
+        Family  : IPv4
+        Address : 100.87.249.53
+        Source  : ip_command
+      [7]
+        Family  : IPv4
+        Address : 172.19.0.1
+        Source  : ip_command
+      [8]
+        Family  : IPv4
+        Address : 172.17.0.1
+        Source  : ip_command
+      [9]
+        Family  : IPv4
+        Address : 172.18.0.1
+        Source  : ip_command
+      [10]
+        Family  : IPv4
+        Address : 172.21.0.1
+        Source  : ip_command
+      [11]
+        Family  : IPv4
+        Address : 172.20.0.1
+        Source  : ip_command
+  [13] veth0d4e88c
+    Name   : veth0d4e88c
+    Is Up  : True
+    Mtu    : 1500
+    Speed  : 10000
+    Source : psutil
+    Addresses:
+      [1]
+        Family    : AF_INET6
+        Address   : fe80::101b:90ff:fe9a:2e83%veth0d4e88c
+        Netmask   : ffff:ffff:ffff:ffff::
+        Broadcast : N/A
+      [2]
+        Family    : AF_PACKET
+        Address   : 12:1b:90:9a:2e:83
+        Netmask   : N/A
+        Broadcast : ff:ff:ff:ff:ff:ff
+      [3]
+        Family  : IPv4
+        Address : 192.168.0.59
+        Source  : ip_command
+      [4]
+        Family  : IPv4
+        Address : 192.168.0.84
+        Source  : ip_command
+      [5]
+        Family  : IPv4
+        Address : 172.16.30.1
+        Source  : ip_command
+      [6]
+        Family  : IPv4
+        Address : 100.87.249.53
+        Source  : ip_command
+      [7]
+        Family  : IPv4
+        Address : 172.19.0.1
+        Source  : ip_command
+      [8]
+        Family  : IPv4
+        Address : 172.17.0.1
+        Source  : ip_command
+      [9]
+        Family  : IPv4
+        Address : 172.18.0.1
+        Source  : ip_command
+      [10]
+        Family  : IPv4
+        Address : 172.21.0.1
+        Source  : ip_command
+      [11]
+        Family  : IPv4
+        Address : 172.20.0.1
+        Source  : ip_command
+  [14] veth34f2aaf
+    Name   : veth34f2aaf
+    Is Up  : True
+    Mtu    : 1500
+    Speed  : 10000
+    Source : psutil
+    Addresses:
+      [1]
+        Family    : AF_INET6
+        Address   : fe80::3cf9:36ff:fe5a:eb36%veth34f2aaf
+        Netmask   : ffff:ffff:ffff:ffff::
+        Broadcast : N/A
+      [2]
+        Family    : AF_PACKET
+        Address   : 3e:f9:36:5a:eb:36
+        Netmask   : N/A
+        Broadcast : ff:ff:ff:ff:ff:ff
+      [3]
+        Family  : IPv4
+        Address : 192.168.0.59
+        Source  : ip_command
+      [4]
+        Family  : IPv4
+        Address : 192.168.0.84
+        Source  : ip_command
+      [5]
+        Family  : IPv4
+        Address : 172.16.30.1
+        Source  : ip_command
+      [6]
+        Family  : IPv4
+        Address : 100.87.249.53
+        Source  : ip_command
+      [7]
+        Family  : IPv4
+        Address : 172.19.0.1
+        Source  : ip_command
+      [8]
+        Family  : IPv4
+        Address : 172.17.0.1
+        Source  : ip_command
+      [9]
+        Family  : IPv4
+        Address : 172.18.0.1
+        Source  : ip_command
+      [10]
+        Family  : IPv4
+        Address : 172.21.0.1
+        Source  : ip_command
+      [11]
+        Family  : IPv4
+        Address : 172.20.0.1
+        Source  : ip_command
+  [15] vethe6c633b
+    Name   : vethe6c633b
+    Is Up  : True
+    Mtu    : 1500
+    Speed  : 10000
+    Source : psutil
+    Addresses:
+      [1]
+        Family    : AF_INET6
+        Address   : fe80::f844:74ff:fe40:f7d%vethe6c633b
+        Netmask   : ffff:ffff:ffff:ffff::
+        Broadcast : N/A
+      [2]
+        Family    : AF_PACKET
+        Address   : fa:44:74:40:0f:7d
+        Netmask   : N/A
+        Broadcast : ff:ff:ff:ff:ff:ff
+      [3]
+        Family  : IPv4
+        Address : 192.168.0.59
+        Source  : ip_command
+      [4]
+        Family  : IPv4
+        Address : 192.168.0.84
+        Source  : ip_command
+      [5]
+        Family  : IPv4
+        Address : 172.16.30.1
+        Source  : ip_command
+      [6]
+        Family  : IPv4
+        Address : 100.87.249.53
+        Source  : ip_command
+      [7]
+        Family  : IPv4
+        Address : 172.19.0.1
+        Source  : ip_command
+      [8]
+        Family  : IPv4
+        Address : 172.17.0.1
+        Source  : ip_command
+      [9]
+        Family  : IPv4
+        Address : 172.18.0.1
+        Source  : ip_command
+      [10]
+        Family  : IPv4
+        Address : 172.21.0.1
+        Source  : ip_command
+      [11]
+        Family  : IPv4
+        Address : 172.20.0.1
+        Source  : ip_command
+  [16] veth0759593
+    Name   : veth0759593
+    Is Up  : True
+    Mtu    : 1500
+    Speed  : 10000
+    Source : psutil
+    Addresses:
+      [1]
+        Family    : AF_INET6
+        Address   : fe80::68a5:a2ff:fe5c:f1b2%veth0759593
+        Netmask   : ffff:ffff:ffff:ffff::
+        Broadcast : N/A
+      [2]
+        Family    : AF_PACKET
+        Address   : 6a:a5:a2:5c:f1:b2
+        Netmask   : N/A
+        Broadcast : ff:ff:ff:ff:ff:ff
+      [3]
+        Family  : IPv4
+        Address : 192.168.0.59
+        Source  : ip_command
+      [4]
+        Family  : IPv4
+        Address : 192.168.0.84
+        Source  : ip_command
+      [5]
+        Family  : IPv4
+        Address : 172.16.30.1
+        Source  : ip_command
+      [6]
+        Family  : IPv4
+        Address : 100.87.249.53
+        Source  : ip_command
+      [7]
+        Family  : IPv4
+        Address : 172.19.0.1
+        Source  : ip_command
+      [8]
+        Family  : IPv4
+        Address : 172.17.0.1
+        Source  : ip_command
+      [9]
+        Family  : IPv4
+        Address : 172.18.0.1
+        Source  : ip_command
+      [10]
+        Family  : IPv4
+        Address : 172.21.0.1
+        Source  : ip_command
+      [11]
+        Family  : IPv4
+        Address : 172.20.0.1
+        Source  : ip_command
+  [17] veth78da13b
+    Name   : veth78da13b
+    Is Up  : True
+    Mtu    : 1500
+    Speed  : 10000
+    Source : psutil
+    Addresses:
+      [1]
+        Family    : AF_INET6
+        Address   : fe80::f876:60ff:feee:7482%veth78da13b
+        Netmask   : ffff:ffff:ffff:ffff::
+        Broadcast : N/A
+      [2]
+        Family    : AF_PACKET
+        Address   : fa:76:60:ee:74:82
+        Netmask   : N/A
+        Broadcast : ff:ff:ff:ff:ff:ff
+      [3]
+        Family  : IPv4
+        Address : 192.168.0.59
+        Source  : ip_command
+      [4]
+        Family  : IPv4
+        Address : 192.168.0.84
+        Source  : ip_command
+      [5]
+        Family  : IPv4
+        Address : 172.16.30.1
+        Source  : ip_command
+      [6]
+        Family  : IPv4
+        Address : 100.87.249.53
+        Source  : ip_command
+      [7]
+        Family  : IPv4
+        Address : 172.19.0.1
+        Source  : ip_command
+      [8]
+        Family  : IPv4
+        Address : 172.17.0.1
+        Source  : ip_command
+      [9]
+        Family  : IPv4
+        Address : 172.18.0.1
+        Source  : ip_command
+      [10]
+        Family  : IPv4
+        Address : 172.21.0.1
+        Source  : ip_command
+      [11]
+        Family  : IPv4
+        Address : 172.20.0.1
+        Source  : ip_command
+  [18] veth68eaef9
+    Name   : veth68eaef9
+    Is Up  : True
+    Mtu    : 1500
+    Speed  : 10000
+    Source : psutil
+    Addresses:
+      [1]
+        Family    : AF_INET6
+        Address   : fe80::cc27:3ff:feae:dd67%veth68eaef9
+        Netmask   : ffff:ffff:ffff:ffff::
+        Broadcast : N/A
+      [2]
+        Family    : AF_PACKET
+        Address   : ce:27:03:ae:dd:67
+        Netmask   : N/A
+        Broadcast : ff:ff:ff:ff:ff:ff
+      [3]
+        Family  : IPv4
+        Address : 192.168.0.59
+        Source  : ip_command
+      [4]
+        Family  : IPv4
+        Address : 192.168.0.84
+        Source  : ip_command
+      [5]
+        Family  : IPv4
+        Address : 172.16.30.1
+        Source  : ip_command
+      [6]
+        Family  : IPv4
+        Address : 100.87.249.53
+        Source  : ip_command
+      [7]
+        Family  : IPv4
+        Address : 172.19.0.1
+        Source  : ip_command
+      [8]
+        Family  : IPv4
+        Address : 172.17.0.1
+        Source  : ip_command
+      [9]
+        Family  : IPv4
+        Address : 172.18.0.1
+        Source  : ip_command
+      [10]
+        Family  : IPv4
+        Address : 172.21.0.1
+        Source  : ip_command
+      [11]
+        Family  : IPv4
+        Address : 172.20.0.1
+        Source  : ip_command
+  [19] veth1e97457
+    Name   : veth1e97457
+    Is Up  : True
+    Mtu    : 1500
+    Speed  : 10000
+    Source : psutil
+    Addresses:
+      [1]
+        Family    : AF_INET6
+        Address   : fe80::cc4b:94ff:fe53:9175%veth1e97457
+        Netmask   : ffff:ffff:ffff:ffff::
+        Broadcast : N/A
+      [2]
+        Family    : AF_PACKET
+        Address   : ce:4b:94:53:91:75
+        Netmask   : N/A
+        Broadcast : ff:ff:ff:ff:ff:ff
+      [3]
+        Family  : IPv4
+        Address : 192.168.0.59
+        Source  : ip_command
+      [4]
+        Family  : IPv4
+        Address : 192.168.0.84
+        Source  : ip_command
+      [5]
+        Family  : IPv4
+        Address : 172.16.30.1
+        Source  : ip_command
+      [6]
+        Family  : IPv4
+        Address : 100.87.249.53
+        Source  : ip_command
+      [7]
+        Family  : IPv4
+        Address : 172.19.0.1
+        Source  : ip_command
+      [8]
+        Family  : IPv4
+        Address : 172.17.0.1
+        Source  : ip_command
+      [9]
+        Family  : IPv4
+        Address : 172.18.0.1
+        Source  : ip_command
+      [10]
+        Family  : IPv4
+        Address : 172.21.0.1
+        Source  : ip_command
+      [11]
+        Family  : IPv4
+        Address : 172.20.0.1
+        Source  : ip_command
+  [20] veth31ba5c0
+    Name   : veth31ba5c0
+    Is Up  : True
+    Mtu    : 1500
+    Speed  : 10000
+    Source : psutil
+    Addresses:
+      [1]
+        Family    : AF_INET6
+        Address   : fe80::fc63:ff:fedc:82dc%veth31ba5c0
+        Netmask   : ffff:ffff:ffff:ffff::
+        Broadcast : N/A
+      [2]
+        Family    : AF_PACKET
+        Address   : fe:63:00:dc:82:dc
+        Netmask   : N/A
+        Broadcast : ff:ff:ff:ff:ff:ff
+      [3]
+        Family  : IPv4
+        Address : 192.168.0.59
+        Source  : ip_command
+      [4]
+        Family  : IPv4
+        Address : 192.168.0.84
+        Source  : ip_command
+      [5]
+        Family  : IPv4
+        Address : 172.16.30.1
+        Source  : ip_command
+      [6]
+        Family  : IPv4
+        Address : 100.87.249.53
+        Source  : ip_command
+      [7]
+        Family  : IPv4
+        Address : 172.19.0.1
+        Source  : ip_command
+      [8]
+        Family  : IPv4
+        Address : 172.17.0.1
+        Source  : ip_command
+      [9]
+        Family  : IPv4
+        Address : 172.18.0.1
+        Source  : ip_command
+      [10]
+        Family  : IPv4
+        Address : 172.21.0.1
+        Source  : ip_command
+      [11]
+        Family  : IPv4
+        Address : 172.20.0.1
+        Source  : ip_command
+Io:
+  Bytes Sent   : 10618039286
+  Bytes Recv   : 11058280501
+  Packets Sent : 35401450
+  Packets Recv : 40568848
+  Errin        : 0
+  Errout       : 43
+  Dropin       : 0
+  Dropout      : 381
+Connection Stats:
+  Established : 69
+  Listen      : 49
+  Time Wait   : 68
+  Close Wait  : 2
+Enhanced:
+  Error : None
+  Wifi Networks:
+    <empty>
+  Gateway Info:
+    0.0.0.0:
+      Count : 1
+    100.87.0.0:
+      Count : 1
+    172.16.30.0:
+      Count : 1
+    172.17.0.0:
+      Count : 1
+    172.18.0.0:
+      Count : 1
+    172.19.0.0:
+      Count : 1
+    172.20.0.0:
+      Count : 1
+    172.21.0.0:
+      Count : 1
+    192.168.0.0:
+      Count : 1
+  Dns Servers:
+    - 127.0.0.53
+  Dhcp Enabled:
+    <empty>
+  Network Discovery:
+    [1]
+      Ip     : 127.0.0.1
+      Source : ip_addr
+    [2]
+      Ip     : 192.168.0.59
+      Source : ip_addr
+    [3]
+      Ip     : 192.168.0.84
+      Source : ip_addr
+    [4]
+      Ip     : 172.16.30.1
+      Source : ip_addr
+    [5]
+      Ip     : 100.87.249.53
+      Source : ip_addr
+    [6]
+      Ip     : 172.19.0.1
+      Source : ip_addr
+    [7]
+      Ip     : 172.17.0.1
+      Source : ip_addr
+    [8]
+      Ip     : 172.18.0.1
+      Source : ip_addr
+    [9]
+      Ip     : 172.21.0.1
+      Source : ip_addr
+    [10]
+      Ip     : 172.20.0.1
+      Source : ip_addr
+Active:
+  Active Adapter   : wlp195s0
+  Ssid             : None
+  Gateway          : 192.168.0.1
+  Ip Address       : 192.168.0.59
+  Ip Address V6    : None
+  Mac Address      : None
+  Isp Info         : None
+  Gateway Hostname : _gateway
+  Gateway Owner    : Private Network (Local Router)
+  Is Private Ip    : True
+  Connection Type  : Ethernet (Wired)
+  Wifi Security    : None
+  Error            : None
+  Dns Servers:
+    - 127.0.0.53
+
+╔══════════════════════════════════════════════════════════════╗
+║                     SYSTEM ARCHITECTURE                      ║
+╚══════════════════════════════════════════════════════════════╝
+
+Available : False
+Error     : None
+Devices:
+  <empty>
+
+╔══════════════════════════════════════════════════════════════╗
+║                        END OF REPORT                         ║
+╚══════════════════════════════════════════════════════════════╝
