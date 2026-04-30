@@ -36,6 +36,10 @@ htmlcov/
 *.lib
 *.exp
 
+# Visual Studio build output
+x64/
+Win32/
+
 # Exclude executables except cpuid_helper.exe
 *.exe
 !cpuid_helper.exe

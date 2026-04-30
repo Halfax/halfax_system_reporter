@@ -1,0 +1,24 @@
+STATUS: Driver operational as of Jan 24, 2026
+
+Current Configuration:
+- Driver: WDM control device architecture
+- Service: HalfaxTelemetry (RUNNING)
+- Device: \\.\HalfaxTelemetry
+- Deployment: Automated via deploy_driver.py
+
+Quick Start:
+  python deploy_driver.py        # Build, deploy, start service
+  halfax_kernel_broker.exe --version
+  python main_integration_example.py
+
+Key Design:
+- Security: SDDL restricts to Admins only
+- Minimal kernel surface: Only privileged MSR/PCI/SMBus primitives
+- Clean separation: Broker handles orchestration, driver is minimal
+- WDM architecture: Control device, no PnP dependencies
+
+Integration:
+  main.py calls halfax_kernel_broker.exe via subprocess
+  Broker returns JSON output for easy parsing
+
+Note: PCI and SMBus are stubbed - extend as needed for specific hardware.
